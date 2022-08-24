@@ -1,0 +1,74 @@
+[
+  {
+    "id": "e7fab066-6441-4902-bfcf-c1ae3ea25ecf",
+    "name": "Deploy Main",
+    "file_name": "deploy_main_db.bat",
+    "action_type": 0
+  },
+  {
+    "id": "f2de9f2c-b9f8-4d00-9c32-405487b931b5",
+    "name": "Deploy CF",
+    "file_name": "deploy_cf_db.bat",
+    "action_type": 0
+  },
+  {
+    "id": "84051677-a3c0-4af1-8998-78f6ea167066",
+    "name": "Migrate Main",
+    "file_name": "migrate_main_db.bat",
+    "action_type": 1
+  },
+  {
+    "id": "d04dee1b-2907-4fc9-983a-326db615fb5b",
+    "name": "Migrate CF",
+    "file_name": "migrate_cf_db.bat",
+    "action_type": 1
+  },
+  {
+    "id": "6dc91c63-18cc-4183-a1d5-89dd3b0f58f0",
+    "name": "Backup All(Main + CF)",
+    "file_name": "00_backup.bat",
+    "action_type": 3
+  },
+  {
+    "id": "e5bc9be5-f542-4cdf-ab3b-207a09119d65",
+    "name": "Backup Main",
+    "file_name": "a_backup.bat",
+    "action_type": 3
+  },
+  {
+    "id": "adb1288e-0da1-47d0-b8a3-b32e820a20c1",
+    "name": "Backup CF",
+    "file_name": "b_backup_cf.bat",
+    "action_type": 3
+  },
+  {
+    "id": "f8d29b0e-b3c1-4132-89b9-7dfd70bbacb8",
+    "name": "Restore All(Main + CF)",
+    "file_name": "00_restore_db.bat",
+    "action_type": 4
+  },
+  {
+    "id": "f6065ac6-1d93-44a4-88f9-280657af733e",
+    "name": "Restore Main",
+    "file_name": "a_restore.bat",
+    "action_type": 4
+  },
+  {
+    "id": "73b54983-9e89-46ef-a571-48331071cb05",
+    "name": "Restore CF",
+    "file_name": "b_restore_cf.bat",
+    "action_type": 4
+  },
+  {
+    "id": "c2c37652-b051-4730-9ac9-f95bee0a2bc9",
+    "name": "Drop Main",
+    "file_name": "a_drop_database.bat",
+    "action_type": 2
+  },
+  {
+    "id": "a5adc162-8961-4b3d-8d7d-94e6b180198a",
+    "name": "Drop CF",
+    "file_name": "b_drop_database_cf.bat",
+    "action_type": 2
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "server": "localhost",
+  "db": "master",
+  "login": "sa",
+  "password": "xx!",
+  "port": "1433",
+  "geo": "ema",
+  "geo_password": "xx!",
+  "user_container_code": "ca",
+  "container_password": "xx!",
+  "container_code": "AAAAAA"
+}

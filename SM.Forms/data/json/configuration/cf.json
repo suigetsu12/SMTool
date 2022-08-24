@@ -1,0 +1,12 @@
+{
+  "server": "ADMIN-07SPBGMBT\\MSSQLSERVER02",
+  "db": "master",
+  "login": "sa",
+  "password": "xx!",
+  "port": "1434",
+  "geo": "ema",
+  "geo_password": "xx!",
+  "user_container_code": "ca",
+  "container_password": "xx!",
+  "container_code": "AAAAAA"
+}

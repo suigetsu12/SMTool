@@ -23,13 +23,21 @@ namespace SM.Shared.Constants
         #endregion
 
         #region [JSON Folder]
-        public const string StartStorage = "start" + FileExtensionContants.Json;//dataStart.json
-        public const string PublishStorage = "publish" + FileExtensionContants.Json;//dataPublish.json
-        public const string DatabaseStorage = "database" + FileExtensionContants.Json;//dataDatabase.json
-        public const string SqlStorage = "sql" + FileExtensionContants.Json;
-        public const string MainServerStorage = "main" + FileExtensionContants.Json;
-        public const string CFServerStorage = "cf" + FileExtensionContants.Json;
-        public const string SettingStorage = "setting" + FileExtensionContants.Json;
+
+        #region [Storage]
+        public const string Start = "start" + FileExtensionContants.Json;//dataStart.json
+        public const string Publish = "publish" + FileExtensionContants.Json;//dataPublish.json
+        public const string Database = "database" + FileExtensionContants.Json;//dataDatabase.json
+        public const string Replace = "replace" + FileExtensionContants.Json;//store queue value to replace in the appsetting.json file
+        #endregion
+
+        #region [Configuration]
+        public const string Sql = "sql" + FileExtensionContants.Json;
+        public const string MainServer = "main" + FileExtensionContants.Json;
+        public const string CFServer = "cf" + FileExtensionContants.Json;
+        public const string Setting = "setting" + FileExtensionContants.Json;
+        #endregion
+
         #endregion
     }
 }
