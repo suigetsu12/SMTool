@@ -13,9 +13,6 @@
     <Folder Include="data\bat\configuration\" />
     <Folder Include="data\bat\publish\" />
     <Folder Include="data\bat\start\" />
-    <Folder Include="data\json\" />
-    <Folder Include="data\json\configuration\" />
-    <Folder Include="data\json\storage\" />
     <Folder Include="data\sql\" />
   </ItemGroup>
 
