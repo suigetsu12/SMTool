@@ -42,14 +42,21 @@
             this.mtPublishApp = new System.Windows.Forms.ToolStripMenuItem();
             this.mtPublishDatabase = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.cbRunFeatures = new System.Windows.Forms.ComboBox();
-            this.btnRun = new System.Windows.Forms.Button();
-            this.btnStop = new System.Windows.Forms.Button();
-            this.btnStopAll = new System.Windows.Forms.Button();
-            this.btnCheckAll = new System.Windows.Forms.Button();
+            this.btnSaveSelected = new System.Windows.Forms.Button();
             this.btnUncheckAll = new System.Windows.Forms.Button();
+            this.btnCheckAll = new System.Windows.Forms.Button();
+            this.btnStopAll = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
+            this.btnRun = new System.Windows.Forms.Button();
+            this.cbRunFeatures = new System.Windows.Forms.ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.dgvStart = new System.Windows.Forms.DataGridView();
+            this.clSelected = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.clId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clFileName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clProcess = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clMessage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -159,6 +166,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnSaveSelected);
             this.panel1.Controls.Add(this.btnUncheckAll);
             this.panel1.Controls.Add(this.btnCheckAll);
             this.panel1.Controls.Add(this.btnStopAll);
@@ -170,40 +178,34 @@
             this.panel1.Size = new System.Drawing.Size(558, 90);
             this.panel1.TabIndex = 1;
             // 
-            // panel2
+            // btnSaveSelected
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.dgvStart);
-            this.panel2.Location = new System.Drawing.Point(12, 127);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(558, 414);
-            this.panel2.TabIndex = 2;
+            this.btnSaveSelected.Location = new System.Drawing.Point(217, 48);
+            this.btnSaveSelected.Name = "btnSaveSelected";
+            this.btnSaveSelected.Size = new System.Drawing.Size(128, 29);
+            this.btnSaveSelected.TabIndex = 6;
+            this.btnSaveSelected.Text = "Save Selected";
+            this.btnSaveSelected.UseVisualStyleBackColor = true;
             // 
-            // cbRunFeatures
+            // btnUncheckAll
             // 
-            this.cbRunFeatures.FormattingEnabled = true;
-            this.cbRunFeatures.Location = new System.Drawing.Point(13, 13);
-            this.cbRunFeatures.Name = "cbRunFeatures";
-            this.cbRunFeatures.Size = new System.Drawing.Size(228, 28);
-            this.cbRunFeatures.TabIndex = 0;
+            this.btnUncheckAll.Location = new System.Drawing.Point(115, 48);
+            this.btnUncheckAll.Name = "btnUncheckAll";
+            this.btnUncheckAll.Size = new System.Drawing.Size(96, 29);
+            this.btnUncheckAll.TabIndex = 5;
+            this.btnUncheckAll.Text = "UnCheck All";
+            this.btnUncheckAll.UseVisualStyleBackColor = true;
+            this.btnUncheckAll.Click += new System.EventHandler(this.btnUncheckAll_Click);
             // 
-            // btnRun
+            // btnCheckAll
             // 
-            this.btnRun.Location = new System.Drawing.Point(251, 13);
-            this.btnRun.Name = "btnRun";
-            this.btnRun.Size = new System.Drawing.Size(94, 29);
-            this.btnRun.TabIndex = 1;
-            this.btnRun.Text = "Run";
-            this.btnRun.UseVisualStyleBackColor = true;
-            // 
-            // btnStop
-            // 
-            this.btnStop.Location = new System.Drawing.Point(351, 13);
-            this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(94, 29);
-            this.btnStop.TabIndex = 2;
-            this.btnStop.Text = "Stop";
-            this.btnStop.UseVisualStyleBackColor = true;
+            this.btnCheckAll.Location = new System.Drawing.Point(13, 47);
+            this.btnCheckAll.Name = "btnCheckAll";
+            this.btnCheckAll.Size = new System.Drawing.Size(96, 29);
+            this.btnCheckAll.TabIndex = 4;
+            this.btnCheckAll.Text = "Check All";
+            this.btnCheckAll.UseVisualStyleBackColor = true;
+            this.btnCheckAll.Click += new System.EventHandler(this.btnCheckAll_Click);
             // 
             // btnStopAll
             // 
@@ -214,33 +216,114 @@
             this.btnStopAll.Text = "Stop All";
             this.btnStopAll.UseVisualStyleBackColor = true;
             // 
-            // btnCheckAll
+            // btnStop
             // 
-            this.btnCheckAll.Location = new System.Drawing.Point(13, 47);
-            this.btnCheckAll.Name = "btnCheckAll";
-            this.btnCheckAll.Size = new System.Drawing.Size(113, 29);
-            this.btnCheckAll.TabIndex = 4;
-            this.btnCheckAll.Text = "Check All";
-            this.btnCheckAll.UseVisualStyleBackColor = true;
+            this.btnStop.Location = new System.Drawing.Point(351, 13);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(94, 29);
+            this.btnStop.TabIndex = 2;
+            this.btnStop.Text = "Stop";
+            this.btnStop.UseVisualStyleBackColor = true;
             // 
-            // btnUncheckAll
+            // btnRun
             // 
-            this.btnUncheckAll.Location = new System.Drawing.Point(132, 47);
-            this.btnUncheckAll.Name = "btnUncheckAll";
-            this.btnUncheckAll.Size = new System.Drawing.Size(109, 29);
-            this.btnUncheckAll.TabIndex = 5;
-            this.btnUncheckAll.Text = "UnCheck All";
-            this.btnUncheckAll.UseVisualStyleBackColor = true;
+            this.btnRun.Enabled = false;
+            this.btnRun.Location = new System.Drawing.Point(251, 13);
+            this.btnRun.Name = "btnRun";
+            this.btnRun.Size = new System.Drawing.Size(94, 29);
+            this.btnRun.TabIndex = 1;
+            this.btnRun.Text = "Run";
+            this.btnRun.UseVisualStyleBackColor = true;
+            // 
+            // cbRunFeatures
+            // 
+            this.cbRunFeatures.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbRunFeatures.FormattingEnabled = true;
+            this.cbRunFeatures.Location = new System.Drawing.Point(13, 13);
+            this.cbRunFeatures.Name = "cbRunFeatures";
+            this.cbRunFeatures.Size = new System.Drawing.Size(228, 28);
+            this.cbRunFeatures.TabIndex = 0;
+            this.cbRunFeatures.SelectedValueChanged += new System.EventHandler(this.cbRunFeatures_SelectedValueChanged);
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.dgvStart);
+            this.panel2.Location = new System.Drawing.Point(12, 127);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(558, 414);
+            this.panel2.TabIndex = 2;
             // 
             // dgvStart
             // 
+            this.dgvStart.AllowUserToAddRows = false;
+            this.dgvStart.AllowUserToDeleteRows = false;
             this.dgvStart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clSelected,
+            this.clId,
+            this.clName,
+            this.clFileName,
+            this.clProcess,
+            this.clMessage});
             this.dgvStart.Location = new System.Drawing.Point(3, 3);
             this.dgvStart.Name = "dgvStart";
             this.dgvStart.RowHeadersWidth = 51;
             this.dgvStart.RowTemplate.Height = 29;
             this.dgvStart.Size = new System.Drawing.Size(550, 406);
             this.dgvStart.TabIndex = 0;
+            // 
+            // clSelected
+            // 
+            this.clSelected.DataPropertyName = "IsChecked";
+            this.clSelected.HeaderText = "";
+            this.clSelected.MinimumWidth = 6;
+            this.clSelected.Name = "clSelected";
+            this.clSelected.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clSelected.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.clSelected.Width = 50;
+            // 
+            // clId
+            // 
+            this.clId.DataPropertyName = "Id";
+            this.clId.HeaderText = "Id";
+            this.clId.MinimumWidth = 6;
+            this.clId.Name = "clId";
+            this.clId.Visible = false;
+            this.clId.Width = 125;
+            // 
+            // clName
+            // 
+            this.clName.DataPropertyName = "Name";
+            this.clName.HeaderText = "Name";
+            this.clName.MinimumWidth = 6;
+            this.clName.Name = "clName";
+            this.clName.Width = 125;
+            // 
+            // clFileName
+            // 
+            this.clFileName.DataPropertyName = "FileName";
+            this.clFileName.HeaderText = "File Name";
+            this.clFileName.MinimumWidth = 6;
+            this.clFileName.Name = "clFileName";
+            this.clFileName.Width = 125;
+            // 
+            // clProcess
+            // 
+            this.clProcess.DataPropertyName = "ProcessId";
+            this.clProcess.HeaderText = "Process";
+            this.clProcess.MinimumWidth = 6;
+            this.clProcess.Name = "clProcess";
+            this.clProcess.Width = 125;
+            // 
+            // clMessage
+            // 
+            this.clMessage.DataPropertyName = "Message";
+            this.clMessage.HeaderText = "Message";
+            this.clMessage.MinimumWidth = 6;
+            this.clMessage.Name = "clMessage";
+            this.clMessage.ReadOnly = true;
+            this.clMessage.Width = 125;
             // 
             // frmMain
             // 
@@ -291,5 +374,12 @@
         private Button btnUncheckAll;
         private Button btnCheckAll;
         private DataGridView dgvStart;
+        private Button btnSaveSelected;
+        private DataGridViewCheckBoxColumn clSelected;
+        private DataGridViewTextBoxColumn clId;
+        private DataGridViewTextBoxColumn clName;
+        private DataGridViewTextBoxColumn clFileName;
+        private DataGridViewTextBoxColumn clProcess;
+        private DataGridViewTextBoxColumn clMessage;
     }
 }

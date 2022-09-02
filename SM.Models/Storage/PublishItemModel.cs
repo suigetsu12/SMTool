@@ -8,5 +8,7 @@ namespace SM.Models.Storage
         [JsonPropertyName("publish_type")]
         public PublishType PublishType { get; set; }
 
+        [JsonPropertyName("description")]
+        public string Description { get; set; }
     }
 }

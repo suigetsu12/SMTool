@@ -2,9 +2,6 @@
 {
     public static class CollectionExtensions
     {
-        public static bool NotNullOrEmpty<T>(this IEnumerable<T> list)
-           => list != null && list.Any();
-
         public static void Merge<TKey, TValue>(this IDictionary<TKey, TValue> source, IDictionary<TKey, TValue> data)
         {
             if (source == null || !data.NotNullOrEmpty())
@@ -22,6 +19,11 @@
 
             foreach (var data in datas)
                 source.Merge(data);
+        }
+
+        public static List<T> GetClone<T>(this List<T> source)
+        {
+            return source.GetRange(0, source.Count);
         }
     }
 }

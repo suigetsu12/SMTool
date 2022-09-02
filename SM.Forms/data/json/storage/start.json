@@ -4,7 +4,7 @@
     "name": "FrontEnd Src",
     "file_name": "start_FE_Src.bat",
     "ischecked": true,
-    "features": [0, 1, 2]
+    "features": [ 0, 1, 2 ]
   },
   {
     "id": "0a5c92a8-505d-44ec-8343-affb6797efbf",
@@ -63,6 +63,13 @@
     "features": [ 0, 1, 3 ]
   },
   {
+    "id": "bd5f94b9-e55b-4bbc-b74d-6d9a06ec2404",
+    "name": "MF ArchivalWebAPI",
+    "file_name": "start_ArchivalWebAPI.bat",
+    "ischecked": false,
+    "features": [ 0, 1, 3 ]
+  },
+  {
     "id": "e4fab5dd-d0c1-4de8-864b-5e2042747916",
     "name": "MF SPOAPI",
     "file_name": "start_SPOAPI.bat",
@@ -95,14 +102,14 @@
     "name": "CopyENG AuvenirDuplicateFileProcessor",
     "file_name": "start_AuvenirDuplicateFileProcessor.bat",
     "ischecked": false,
-    "features": [0, 4]
+    "features": [ 0, 4 ]
   },
   {
     "id": "26c3999b-12a5-4514-8557-daf5083e8dcb",
     "name": "CF CarryforwardContentProcessor",
     "file_name": "start_CarryforwardContentProcessor.bat",
     "ischecked": false,
-    "features": [0, 5]
+    "features": [ 0, 5 ]
   },
   {
     "id": "9467d423-6529-4964-a7b7-2d6bce167c58",
@@ -124,12 +131,5 @@
     "file_name": "start_CarryforwardProcessor.bat",
     "ischecked": false,
     "features": [ 0, 5 ]
-  },
-  {
-    "id": "bd5f94b9-e55b-4bbc-b74d-6d9a06ec2404",
-    "name": "MF ArchivalWebAPI",
-    "file_name": "start_ArchivalWebAPI.bat",
-    "ischecked": false,
-    "features": [ 0, 1, 3 ]
   }
 ]

@@ -12,9 +12,11 @@ namespace SM.Models.Storage
         public List<FeatureType> Features { get; set; }
 
         [JsonIgnore]
-        public string Message { get; set; }
+        public int ProcessId { get; set; }
 
         [JsonIgnore]
-        public int ProcessId { get; set; }
+        public string Message { get; set; }
+
+        
     }
 }

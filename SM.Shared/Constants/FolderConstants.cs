@@ -8,7 +8,7 @@ namespace SM.Shared.Constants
 {
     public static class FolderConstants
     {
-        public const string Root = "\\data\\";
+        public const string Root = "data\\";
         public class Bat
         {
             public const string Root = FolderConstants.Root + "bat\\";

@@ -3,37 +3,43 @@
     "id": "624801b7-2c01-4740-a809-ca08973c6c03",
     "name": "Full Flow",
     "file_name": "000_publish_dev-full-Flow.bat",
-    "publish_type": 0
+    "publish_type": 0,
+    "description": "CoreService, PlanningStep, NonAccountWorkingPaperService, CommonToolService, AccountWorkingPaperService, FileServices, SPOProcessor, SPOApi, FileIntegrityCheckProcessor, ArchiveWebjob, ArchiveAPI, ContentProcessor, CarryfowardProcessor, CarryfowardContentProcessor, CarryfowardCopyENGProcessor, CarryfowardFileTransferProcessor, AuvenirDuplicateEngCommon, AuvenirDuplicateEngProcessor, AuvenirDuplicateFileProcessor"
   },
   {
     "id": "d36ac654-bcbf-49e2-8554-91fae2c9ca52",
     "name": "Full Main Flow",
     "file_name": "00_publish_dev-full-MainFlow.bat",
-    "publish_type": 0
+    "publish_type": 0,
+    "description": "CoreService, PlanningStep, NonAccountWorkingPaperService, AccountWorkingPaperService, CommonToolService, FileServices, SPOProcessor, SPOAPI, FileIntegrityCheckProcessor, ArchiveWebjob, ArchiveAPI, ContentProcessor"
   },
   {
     "id": "4875ad96-7cbd-4504-9907-54e28a651ad7",
     "name": "Small Main Flow",
     "file_name": "01_publish_dev_small-MainFlow.bat",
-    "publish_type": 0
+    "publish_type": 0,
+    "description": "CoreService, PlanningStep, NonAccountWorkingPaperService, CommonToolService, AccountWorkingPaperService"
   },
   {
     "id": "97b6cff2-fe71-46fc-852a-016b09ddb356",
     "name": "Duplicate Engagement Feature",
     "file_name": "02_publish_dev-DuplicateEngagementFeature.bat",
-    "publish_type": 0
+    "publish_type": 0,
+    "description": "AuvenirDuplicateEngCommon, AuvenirDuplicateEngProcessor, AuvenirDuplicateFileProcessor"
   },
   {
     "id": "6300ce95-a8e1-4164-a8a5-ce0876a802cb",
     "name": "Archive Feature",
     "file_name": "03_publish_dev-ArchiveFeature.bat",
-    "publish_type": 0
+    "publish_type": 0,
+    "description": "ArchiveWebjob, ArchiveAPI"
   },
   {
     "id": "28a0c3b7-870a-4abf-bf00-ae7cf80f5d8d",
     "name": "Carry Forward Feature",
     "file_name": "04_publish_dev-CarryForwardFeature.bat",
-    "publish_type": 0
+    "publish_type": 0,
+    "description": "CarryfowardProcessor, CarryfowardContentProcessor, CarryfowardCopyENGProcessor, CarryfowardFileTransferProcessor"
   },
   {
     "id": "c1ad7b9a-ab83-4cc8-9378-c2a2402d749c",
