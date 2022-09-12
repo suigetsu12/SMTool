@@ -154,14 +154,16 @@
             // mtPublishApp
             // 
             this.mtPublishApp.Name = "mtPublishApp";
-            this.mtPublishApp.Size = new System.Drawing.Size(155, 26);
+            this.mtPublishApp.Size = new System.Drawing.Size(224, 26);
             this.mtPublishApp.Text = "App";
+            this.mtPublishApp.Click += new System.EventHandler(this.mtPublishApp_Click);
             // 
             // mtPublishDatabase
             // 
             this.mtPublishDatabase.Name = "mtPublishDatabase";
-            this.mtPublishDatabase.Size = new System.Drawing.Size(155, 26);
+            this.mtPublishDatabase.Size = new System.Drawing.Size(224, 26);
             this.mtPublishDatabase.Text = "Database";
+            this.mtPublishDatabase.Click += new System.EventHandler(this.mtPublishDatabase_Click);
             // 
             // panel1
             // 

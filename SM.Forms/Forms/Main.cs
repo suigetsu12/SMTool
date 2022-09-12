@@ -1,4 +1,5 @@
-﻿using SM.Forms.Forms.Settings;
+﻿using SM.Forms.Forms.Publishes;
+using SM.Forms.Forms.Settings;
 using SM.Models;
 using SM.Models.Controls;
 using SM.Models.Storage;
@@ -96,20 +97,17 @@ namespace SM.Forms.Forms
 
         private void mtConfiguration_Click(object sender, EventArgs e)
         {
-            frmConfiguration frm = new frmConfiguration();
-            frm.ShowDialog();
+            ShowForm(new frmConfiguration());
         }
 
         private void mtSQLConfiguration_Click(object sender, EventArgs e)
         {
-            frmSQL frm = new frmSQL();
-            frm.ShowDialog();
+            ShowForm(new frmSQL());
         }
 
         private void mtServers_Click(object sender, EventArgs e)
         {
-            frmServer frm = new frmServer();
-            frm.ShowDialog();
+            ShowForm(new frmServer());
         }
 
         private void btnCheckAll_Click(object sender, EventArgs e)
@@ -159,6 +157,21 @@ namespace SM.Forms.Forms
                 });
             }
             Refresh();
+        }
+
+        private void mtPublishApp_Click(object sender, EventArgs e)
+        {
+            ShowForm(new frmApp());
+        }
+
+        private void ShowForm(Form form)
+        {
+            form.ShowDialog();
+        }
+
+        private void mtPublishDatabase_Click(object sender, EventArgs e)
+        {
+            ShowForm(new frmDatabase());
         }
     }
 }
