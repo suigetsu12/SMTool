@@ -6,6 +6,5 @@
   "core_dacpac": "C:\\Projects\\Commercial\\6.0\\AuvCommercial.SQLDB\\DatabaseDeployment\\Core\\bin\\Local\\Core.dacpac",
   "workingpaper_dacpac": "C:\\Projects\\Commercial\\6.0\\AuvCommercial.SQLDB\\DatabaseDeployment\\WorkingPaper\\bin\\Local\\WorkingPaper.dacpac",
   "sql_package": "C:\\Program Files\\Microsoft SQL Server\\150\\DAC\\bin\\SqlPackage.exe",
-  "deployenv": "DEV",
-  "msbuild": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe"
+  "deployenv": "DEV"
 }

@@ -16,10 +16,10 @@ namespace SM.Shared.Constants
         #endregion
 
         #region [Json Config]
-        public const string Js_Cf = FolderConstants.Json.Storage + FileConstants.CFServer;
-        public const string Js_Main = FolderConstants.Json.Storage + FileConstants.MainServer;
-        public const string Js_Setting = FolderConstants.Json.Storage + FileConstants.Setting;
-        public const string Js_Sql = FolderConstants.Json.Storage + FileConstants.Sql;
+        public const string Js_Cf = FolderConstants.Json.Configuration + FileConstants.CFServer;
+        public const string Js_Main = FolderConstants.Json.Configuration + FileConstants.MainServer;
+        public const string Js_Setting = FolderConstants.Json.Configuration + FileConstants.Setting;
+        public const string Js_Sql = FolderConstants.Json.Configuration + FileConstants.Sql;
         #endregion
     }
 }

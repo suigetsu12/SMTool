@@ -1,5 +1,6 @@
 using SM.Forms.Forms;
 using SM.Models;
+using SM.Models.Configuration;
 using SM.Models.Storage;
 using SM.Shared.Constants;
 using SM.Shared.Extensions;
@@ -33,10 +34,17 @@ namespace SM.Forms
         private static void LoadStartData()
         {
             string _startPath = Path.Combine(Global.RootAppFolderPath, PathConstants.Js_Start);
-            string jsonString = FileHelper.ReadFile(_startPath);
-            if (jsonString.NotNullOrEmpty())
+            string jsonStartString = FileHelper.ReadFile(_startPath);
+            if (jsonStartString.NotNullOrEmpty())
             {
-                Global.StartItem = JsonHelper.Deserialize<List<StartItemModel>>(jsonString);
+                Global.StartItem = JsonHelper.Deserialize<List<StartItemModel>>(jsonStartString);
+            }
+
+            string _settingPath = Path.Combine(Global.RootAppFolderPath, PathConstants.Js_Setting);
+            string jsonSettingString = FileHelper.ReadFile(_settingPath);
+            if (jsonSettingString.NotNullOrEmpty())
+            {
+                Global.Configuration = JsonHelper.Deserialize<SettingModel>(jsonSettingString);
             }
         }
     }

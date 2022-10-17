@@ -24,5 +24,11 @@ namespace SM.Models.Configuration
 
         [JsonPropertyName("VsDevCmd_path")]
         public string VsDevCmdPath { get; set; }
+
+        [JsonPropertyName("MsBuils_path")]
+        public string MSBuildPath { get; set; }
+
+        [JsonPropertyName("azureFuncTool_path")]
+        public string AzureFuncToolPath { get; set; }
     }
 }

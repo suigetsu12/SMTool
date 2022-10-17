@@ -41,12 +41,18 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtCatalogDACPAC = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtMsBuild = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtDeployEnv = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtSQLPackage = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.btnPath = new System.Windows.Forms.Button();
+            this.btnSQLCMD = new System.Windows.Forms.Button();
+            this.btnSQLPackage = new System.Windows.Forms.Button();
+            this.btnDeployEnv = new System.Windows.Forms.Button();
+            this.btnSQLServerSolution = new System.Windows.Forms.Button();
+            this.btnCatalogDACPAC = new System.Windows.Forms.Button();
+            this.btnCoreDACPAC = new System.Windows.Forms.Button();
+            this.btnWorkingpaperDACPAC = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSave
@@ -71,14 +77,16 @@
             // 
             this.txtPath.Location = new System.Drawing.Point(170, 12);
             this.txtPath.Name = "txtPath";
-            this.txtPath.Size = new System.Drawing.Size(600, 27);
+            this.txtPath.ReadOnly = true;
+            this.txtPath.Size = new System.Drawing.Size(550, 27);
             this.txtPath.TabIndex = 2;
             // 
             // txtSQMCMD
             // 
             this.txtSQMCMD.Location = new System.Drawing.Point(170, 45);
             this.txtSQMCMD.Name = "txtSQMCMD";
-            this.txtSQMCMD.Size = new System.Drawing.Size(600, 27);
+            this.txtSQMCMD.ReadOnly = true;
+            this.txtSQMCMD.Size = new System.Drawing.Size(550, 27);
             this.txtSQMCMD.TabIndex = 4;
             // 
             // label2
@@ -94,7 +102,8 @@
             // 
             this.txtSQLServerSolution.Location = new System.Drawing.Point(170, 78);
             this.txtSQLServerSolution.Name = "txtSQLServerSolution";
-            this.txtSQLServerSolution.Size = new System.Drawing.Size(600, 27);
+            this.txtSQLServerSolution.ReadOnly = true;
+            this.txtSQLServerSolution.Size = new System.Drawing.Size(550, 27);
             this.txtSQLServerSolution.TabIndex = 6;
             // 
             // label3
@@ -110,7 +119,8 @@
             // 
             this.txtWorkingpaperDACPAC.Location = new System.Drawing.Point(170, 177);
             this.txtWorkingpaperDACPAC.Name = "txtWorkingpaperDACPAC";
-            this.txtWorkingpaperDACPAC.Size = new System.Drawing.Size(600, 27);
+            this.txtWorkingpaperDACPAC.ReadOnly = true;
+            this.txtWorkingpaperDACPAC.Size = new System.Drawing.Size(550, 27);
             this.txtWorkingpaperDACPAC.TabIndex = 12;
             // 
             // label4
@@ -126,7 +136,8 @@
             // 
             this.txtCoreDACPAC.Location = new System.Drawing.Point(170, 144);
             this.txtCoreDACPAC.Name = "txtCoreDACPAC";
-            this.txtCoreDACPAC.Size = new System.Drawing.Size(600, 27);
+            this.txtCoreDACPAC.ReadOnly = true;
+            this.txtCoreDACPAC.Size = new System.Drawing.Size(550, 27);
             this.txtCoreDACPAC.TabIndex = 10;
             // 
             // label5
@@ -142,7 +153,8 @@
             // 
             this.txtCatalogDACPAC.Location = new System.Drawing.Point(170, 111);
             this.txtCatalogDACPAC.Name = "txtCatalogDACPAC";
-            this.txtCatalogDACPAC.Size = new System.Drawing.Size(600, 27);
+            this.txtCatalogDACPAC.ReadOnly = true;
+            this.txtCatalogDACPAC.Size = new System.Drawing.Size(550, 27);
             this.txtCatalogDACPAC.TabIndex = 8;
             // 
             // label6
@@ -154,27 +166,12 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "Catalog DACPAC";
             // 
-            // txtMsBuild
-            // 
-            this.txtMsBuild.Location = new System.Drawing.Point(170, 276);
-            this.txtMsBuild.Name = "txtMsBuild";
-            this.txtMsBuild.Size = new System.Drawing.Size(600, 27);
-            this.txtMsBuild.TabIndex = 18;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(102, 279);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 20);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "MsBuild";
-            // 
             // txtDeployEnv
             // 
             this.txtDeployEnv.Location = new System.Drawing.Point(170, 243);
             this.txtDeployEnv.Name = "txtDeployEnv";
-            this.txtDeployEnv.Size = new System.Drawing.Size(600, 27);
+            this.txtDeployEnv.ReadOnly = true;
+            this.txtDeployEnv.Size = new System.Drawing.Size(550, 27);
             this.txtDeployEnv.TabIndex = 16;
             // 
             // label8
@@ -190,7 +187,8 @@
             // 
             this.txtSQLPackage.Location = new System.Drawing.Point(170, 210);
             this.txtSQLPackage.Name = "txtSQLPackage";
-            this.txtSQLPackage.Size = new System.Drawing.Size(600, 27);
+            this.txtSQLPackage.ReadOnly = true;
+            this.txtSQLPackage.Size = new System.Drawing.Size(550, 27);
             this.txtSQLPackage.TabIndex = 14;
             // 
             // label9
@@ -202,13 +200,91 @@
             this.label9.TabIndex = 13;
             this.label9.Text = "SQL Package";
             // 
+            // btnPath
+            // 
+            this.btnPath.Location = new System.Drawing.Point(726, 12);
+            this.btnPath.Name = "btnPath";
+            this.btnPath.Size = new System.Drawing.Size(48, 27);
+            this.btnPath.TabIndex = 19;
+            this.btnPath.Text = "...";
+            this.btnPath.UseVisualStyleBackColor = true;
+            // 
+            // btnSQLCMD
+            // 
+            this.btnSQLCMD.Location = new System.Drawing.Point(726, 45);
+            this.btnSQLCMD.Name = "btnSQLCMD";
+            this.btnSQLCMD.Size = new System.Drawing.Size(48, 27);
+            this.btnSQLCMD.TabIndex = 20;
+            this.btnSQLCMD.Text = "...";
+            this.btnSQLCMD.UseVisualStyleBackColor = true;
+            // 
+            // btnSQLPackage
+            // 
+            this.btnSQLPackage.Location = new System.Drawing.Point(726, 210);
+            this.btnSQLPackage.Name = "btnSQLPackage";
+            this.btnSQLPackage.Size = new System.Drawing.Size(48, 27);
+            this.btnSQLPackage.TabIndex = 21;
+            this.btnSQLPackage.Text = "...";
+            this.btnSQLPackage.UseVisualStyleBackColor = true;
+            // 
+            // btnDeployEnv
+            // 
+            this.btnDeployEnv.Location = new System.Drawing.Point(726, 243);
+            this.btnDeployEnv.Name = "btnDeployEnv";
+            this.btnDeployEnv.Size = new System.Drawing.Size(48, 27);
+            this.btnDeployEnv.TabIndex = 22;
+            this.btnDeployEnv.Text = "...";
+            this.btnDeployEnv.UseVisualStyleBackColor = true;
+            // 
+            // btnSQLServerSolution
+            // 
+            this.btnSQLServerSolution.Location = new System.Drawing.Point(726, 78);
+            this.btnSQLServerSolution.Name = "btnSQLServerSolution";
+            this.btnSQLServerSolution.Size = new System.Drawing.Size(48, 27);
+            this.btnSQLServerSolution.TabIndex = 24;
+            this.btnSQLServerSolution.Text = "...";
+            this.btnSQLServerSolution.UseVisualStyleBackColor = true;
+            // 
+            // btnCatalogDACPAC
+            // 
+            this.btnCatalogDACPAC.Location = new System.Drawing.Point(726, 111);
+            this.btnCatalogDACPAC.Name = "btnCatalogDACPAC";
+            this.btnCatalogDACPAC.Size = new System.Drawing.Size(48, 27);
+            this.btnCatalogDACPAC.TabIndex = 25;
+            this.btnCatalogDACPAC.Text = "...";
+            this.btnCatalogDACPAC.UseVisualStyleBackColor = true;
+            // 
+            // btnCoreDACPAC
+            // 
+            this.btnCoreDACPAC.Location = new System.Drawing.Point(726, 144);
+            this.btnCoreDACPAC.Name = "btnCoreDACPAC";
+            this.btnCoreDACPAC.Size = new System.Drawing.Size(48, 27);
+            this.btnCoreDACPAC.TabIndex = 26;
+            this.btnCoreDACPAC.Text = "...";
+            this.btnCoreDACPAC.UseVisualStyleBackColor = true;
+            // 
+            // btnWorkingpaperDACPAC
+            // 
+            this.btnWorkingpaperDACPAC.Location = new System.Drawing.Point(726, 177);
+            this.btnWorkingpaperDACPAC.Name = "btnWorkingpaperDACPAC";
+            this.btnWorkingpaperDACPAC.Size = new System.Drawing.Size(48, 27);
+            this.btnWorkingpaperDACPAC.TabIndex = 27;
+            this.btnWorkingpaperDACPAC.Text = "...";
+            this.btnWorkingpaperDACPAC.UseVisualStyleBackColor = true;
+            // 
             // frmSQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
-            this.Controls.Add(this.txtMsBuild);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.btnWorkingpaperDACPAC);
+            this.Controls.Add(this.btnCoreDACPAC);
+            this.Controls.Add(this.btnCatalogDACPAC);
+            this.Controls.Add(this.btnSQLServerSolution);
+            this.Controls.Add(this.btnDeployEnv);
+            this.Controls.Add(this.btnSQLPackage);
+            this.Controls.Add(this.btnSQLCMD);
+            this.Controls.Add(this.btnPath);
             this.Controls.Add(this.txtDeployEnv);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtSQLPackage);
@@ -252,11 +328,17 @@
         private Label label5;
         private TextBox txtCatalogDACPAC;
         private Label label6;
-        private TextBox txtMsBuild;
-        private Label label7;
         private TextBox txtDeployEnv;
         private Label label8;
         private TextBox txtSQLPackage;
         private Label label9;
+        private Button btnPath;
+        private Button btnSQLCMD;
+        private Button btnSQLPackage;
+        private Button btnDeployEnv;
+        private Button btnSQLServerSolution;
+        private Button btnCatalogDACPAC;
+        private Button btnCoreDACPAC;
+        private Button btnWorkingpaperDACPAC;
     }
 }
