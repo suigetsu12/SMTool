@@ -28,16 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mtConfiguration = new System.Windows.Forms.ToolStripMenuItem();
-            this.mtSQLConfiguration = new System.Windows.Forms.ToolStripMenuItem();
-            this.mtServers = new System.Windows.Forms.ToolStripMenuItem();
-            this.storagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mtStoragePublish = new System.Windows.Forms.ToolStripMenuItem();
-            this.mtStorageStart = new System.Windows.Forms.ToolStripMenuItem();
-            this.mtStorageDatabase = new System.Windows.Forms.ToolStripMenuItem();
-            this.mtStorageReplaceAppSetting = new System.Windows.Forms.ToolStripMenuItem();
             this.publishToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mtPublishApp = new System.Windows.Forms.ToolStripMenuItem();
             this.mtPublishDatabase = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,6 +51,13 @@
             this.clFileName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clProcess = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clMessage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clOrder = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mtFeature = new System.Windows.Forms.ToolStripMenuItem();
+            this.mtPublish = new System.Windows.Forms.ToolStripMenuItem();
+            this.mtStart = new System.Windows.Forms.ToolStripMenuItem();
+            this.mtDatabase = new System.Windows.Forms.ToolStripMenuItem();
+            this.mtReplaceConfig = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -67,9 +68,8 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.settingsToolStripMenuItem,
-            this.storagesToolStripMenuItem,
-            this.publishToolStripMenuItem1});
+            this.publishToolStripMenuItem1,
+            this.settingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(582, 28);
@@ -80,8 +80,7 @@
             // 
             this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mtConfiguration,
-            this.mtSQLConfiguration,
-            this.mtServers});
+            this.dataToolStripMenuItem});
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.settingsToolStripMenuItem.Text = "Settings";
@@ -89,58 +88,9 @@
             // mtConfiguration
             // 
             this.mtConfiguration.Name = "mtConfiguration";
-            this.mtConfiguration.Size = new System.Drawing.Size(183, 26);
+            this.mtConfiguration.Size = new System.Drawing.Size(224, 26);
             this.mtConfiguration.Text = "Configuration";
             this.mtConfiguration.Click += new System.EventHandler(this.mtConfiguration_Click);
-            // 
-            // mtSQLConfiguration
-            // 
-            this.mtSQLConfiguration.Name = "mtSQLConfiguration";
-            this.mtSQLConfiguration.Size = new System.Drawing.Size(183, 26);
-            this.mtSQLConfiguration.Text = "SQL";
-            this.mtSQLConfiguration.Click += new System.EventHandler(this.mtSQLConfiguration_Click);
-            // 
-            // mtServers
-            // 
-            this.mtServers.Name = "mtServers";
-            this.mtServers.Size = new System.Drawing.Size(183, 26);
-            this.mtServers.Text = "Servers";
-            this.mtServers.Click += new System.EventHandler(this.mtServers_Click);
-            // 
-            // storagesToolStripMenuItem
-            // 
-            this.storagesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mtStoragePublish,
-            this.mtStorageStart,
-            this.mtStorageDatabase,
-            this.mtStorageReplaceAppSetting});
-            this.storagesToolStripMenuItem.Name = "storagesToolStripMenuItem";
-            this.storagesToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
-            this.storagesToolStripMenuItem.Text = "Storages";
-            // 
-            // mtStoragePublish
-            // 
-            this.mtStoragePublish.Name = "mtStoragePublish";
-            this.mtStoragePublish.Size = new System.Drawing.Size(228, 26);
-            this.mtStoragePublish.Text = "Publish";
-            // 
-            // mtStorageStart
-            // 
-            this.mtStorageStart.Name = "mtStorageStart";
-            this.mtStorageStart.Size = new System.Drawing.Size(228, 26);
-            this.mtStorageStart.Text = "Start";
-            // 
-            // mtStorageDatabase
-            // 
-            this.mtStorageDatabase.Name = "mtStorageDatabase";
-            this.mtStorageDatabase.Size = new System.Drawing.Size(228, 26);
-            this.mtStorageDatabase.Text = "Database";
-            // 
-            // mtStorageReplaceAppSetting
-            // 
-            this.mtStorageReplaceAppSetting.Name = "mtStorageReplaceAppSetting";
-            this.mtStorageReplaceAppSetting.Size = new System.Drawing.Size(228, 26);
-            this.mtStorageReplaceAppSetting.Text = "Replace App Setting";
             // 
             // publishToolStripMenuItem1
             // 
@@ -226,6 +176,7 @@
             this.btnStop.TabIndex = 2;
             this.btnStop.Text = "Stop";
             this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // btnRun
             // 
@@ -267,7 +218,8 @@
             this.clName,
             this.clFileName,
             this.clProcess,
-            this.clMessage});
+            this.clMessage,
+            this.clOrder});
             this.dgvStart.Location = new System.Drawing.Point(3, 3);
             this.dgvStart.Name = "dgvStart";
             this.dgvStart.RowHeadersWidth = 51;
@@ -308,6 +260,7 @@
             this.clFileName.HeaderText = "File Name";
             this.clFileName.MinimumWidth = 6;
             this.clFileName.Name = "clFileName";
+            this.clFileName.Visible = false;
             this.clFileName.Width = 125;
             // 
             // clProcess
@@ -327,6 +280,58 @@
             this.clMessage.ReadOnly = true;
             this.clMessage.Width = 125;
             // 
+            // clOrder
+            // 
+            this.clOrder.DataPropertyName = "Order";
+            this.clOrder.HeaderText = "Order";
+            this.clOrder.MinimumWidth = 6;
+            this.clOrder.Name = "clOrder";
+            this.clOrder.ReadOnly = true;
+            this.clOrder.Visible = false;
+            this.clOrder.Width = 125;
+            // 
+            // dataToolStripMenuItem
+            // 
+            this.dataToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mtFeature,
+            this.mtPublish,
+            this.mtStart,
+            this.mtDatabase,
+            this.mtReplaceConfig});
+            this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
+            this.dataToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dataToolStripMenuItem.Text = "Data";
+            // 
+            // mtFeature
+            // 
+            this.mtFeature.Name = "mtFeature";
+            this.mtFeature.Size = new System.Drawing.Size(224, 26);
+            this.mtFeature.Text = "Feature";
+            // 
+            // mtPublish
+            // 
+            this.mtPublish.Name = "mtPublish";
+            this.mtPublish.Size = new System.Drawing.Size(224, 26);
+            this.mtPublish.Text = "Publish";
+            // 
+            // mtStart
+            // 
+            this.mtStart.Name = "mtStart";
+            this.mtStart.Size = new System.Drawing.Size(224, 26);
+            this.mtStart.Text = "Start";
+            // 
+            // mtDatabase
+            // 
+            this.mtDatabase.Name = "mtDatabase";
+            this.mtDatabase.Size = new System.Drawing.Size(224, 26);
+            this.mtDatabase.Text = "Database";
+            // 
+            // mtReplaceConfig
+            // 
+            this.mtReplaceConfig.Name = "mtReplaceConfig";
+            this.mtReplaceConfig.Size = new System.Drawing.Size(224, 26);
+            this.mtReplaceConfig.Text = "Replace Config";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -336,11 +341,12 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main";
+            this.Text = "Commercial Tool";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -357,13 +363,6 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem settingsToolStripMenuItem;
         private ToolStripMenuItem mtConfiguration;
-        private ToolStripMenuItem mtSQLConfiguration;
-        private ToolStripMenuItem mtServers;
-        private ToolStripMenuItem storagesToolStripMenuItem;
-        private ToolStripMenuItem mtStoragePublish;
-        private ToolStripMenuItem mtStorageStart;
-        private ToolStripMenuItem mtStorageDatabase;
-        private ToolStripMenuItem mtStorageReplaceAppSetting;
         private ToolStripMenuItem publishToolStripMenuItem1;
         private ToolStripMenuItem mtPublishApp;
         private ToolStripMenuItem mtPublishDatabase;
@@ -383,5 +382,12 @@
         private DataGridViewTextBoxColumn clFileName;
         private DataGridViewTextBoxColumn clProcess;
         private DataGridViewTextBoxColumn clMessage;
+        private DataGridViewTextBoxColumn clOrder;
+        private ToolStripMenuItem dataToolStripMenuItem;
+        private ToolStripMenuItem mtFeature;
+        private ToolStripMenuItem mtPublish;
+        private ToolStripMenuItem mtStart;
+        private ToolStripMenuItem mtDatabase;
+        private ToolStripMenuItem mtReplaceConfig;
     }
 }

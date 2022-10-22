@@ -8,5 +8,6 @@
   "geo_password": "xx!",
   "user_container_code": "ca",
   "container_password": "xx!",
-  "container_code": "AAAAAA"
+  "container_code": "AAAAAA",
+  "deployenv": "DEV"
 }

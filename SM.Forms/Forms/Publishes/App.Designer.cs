@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmApp));
             this.pnItems = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdbFunction = new System.Windows.Forms.RadioButton();
@@ -64,6 +65,7 @@
             this.rdbFunction.TabStop = true;
             this.rdbFunction.Text = "Function";
             this.rdbFunction.UseVisualStyleBackColor = true;
+            this.rdbFunction.CheckedChanged += new System.EventHandler(this.rdbFunction_CheckedChanged);
             // 
             // rdbFeature
             // 
@@ -75,6 +77,7 @@
             this.rdbFeature.TabStop = true;
             this.rdbFeature.Text = "Feature";
             this.rdbFeature.UseVisualStyleBackColor = true;
+            this.rdbFeature.CheckedChanged += new System.EventHandler(this.rdbFeature_CheckedChanged);
             // 
             // btnPublish
             // 
@@ -86,6 +89,7 @@
             this.btnPublish.TabIndex = 5;
             this.btnPublish.Text = "Run";
             this.btnPublish.UseVisualStyleBackColor = false;
+            this.btnPublish.Click += new System.EventHandler(this.btnPublish_Click);
             // 
             // frmApp
             // 
@@ -96,6 +100,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnPublish);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmApp";

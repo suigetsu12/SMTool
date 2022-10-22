@@ -10,13 +10,7 @@
     <Compile Update="Forms\Publishes\Database.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\Settings\Server.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Forms\Settings\Configuration.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Forms\Settings\SQL.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

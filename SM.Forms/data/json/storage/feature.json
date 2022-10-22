@@ -1,0 +1,32 @@
+[
+  {
+    "id": "eb48e3ed-f342-4b19-b762-fcab3f2278e8",
+    "name": "Full flow",
+    "order": 0
+  },
+  {
+    "id": "724b77f5-caaf-44ad-83d0-4e3a179100e2",
+    "name": "Full Main flow",
+    "order": 1
+  },
+  {
+    "id": "7b427709-a874-4652-ba0a-1c1a320bff1d",
+    "name": "Full Small flow",
+    "order": 2
+  },
+  {
+    "id": "e91866ff-44ce-4d9c-bae2-49db79178bc9",
+    "name": "Archive",
+    "order": 3
+  },
+  {
+    "id": "db2c3658-bf27-4f03-af20-0eb59d8435be",
+    "name": "Duplicate Engagement",
+    "order": 4
+  },
+  {
+    "id": "453f4f4a-5ff3-4570-b303-5cc05dd45693",
+    "name": "Carryforward",
+    "order": 5
+  }
+]

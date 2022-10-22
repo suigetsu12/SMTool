@@ -23,6 +23,7 @@ namespace SM.Forms.Forms
     public partial class frmMain : Form
     {
         private List<StartItemModel> memoryStartItems = new List<StartItemModel>();
+        private List<BaseItemModel> features = new List<BaseItemModel>();
         public frmMain()
         {
             InitializeComponent();
@@ -43,26 +44,34 @@ namespace SM.Forms.Forms
                     IsChecked = x.IsChecked,
                     Message = x.Message,
                     Name = x.Name,
-                    ProcessId = x.ProcessId
+                    ProcessId = x.ProcessId,
+                    Order = x.Order
                 }).ToList();
             }    
         }
 
         private void LoadFeatureData()
         {
-            List<DropdownItemModel> items = new List<DropdownItemModel>();
-            DropdownItemModel firstItem = new DropdownItemModel
+            string _featurePath = Path.Combine(Global.RootAppFolderPath, PathConstants.Js_Feature);
+            string jsonFeatureString = FileHelper.ReadFile(_featurePath);
+            if (jsonFeatureString.NotNullOrEmpty())
+            {
+                features = (JsonHelper.Deserialize<List<BaseItemModel>>(jsonFeatureString)).OrderBy(o => o.Order).ToList();
+            }
+            List<FeatureDropdownItemModel> items = new List<FeatureDropdownItemModel>();
+            FeatureDropdownItemModel firstItem = new FeatureDropdownItemModel
             {
                 Text = "Selected Items",
-                Value = -1
+                Value = Guid.Empty
             };
             cbRunFeatures.Items.Add(firstItem);
-            foreach (FeatureType ft in Enum.GetValues(typeof(FeatureType)))
+
+            foreach (var  ft in features)
             {
-                DropdownItemModel item = new DropdownItemModel
+                FeatureDropdownItemModel item = new FeatureDropdownItemModel
                 {
-                    Text = ft.StringValueOfEnum(),
-                    Value = (int)ft
+                    Text = ft.Name,
+                    Value = ft.Id
                 };
                 cbRunFeatures.Items.Add(item);
             }
@@ -100,16 +109,6 @@ namespace SM.Forms.Forms
             ShowForm(new frmConfiguration());
         }
 
-        private void mtSQLConfiguration_Click(object sender, EventArgs e)
-        {
-            ShowForm(new frmSQL());
-        }
-
-        private void mtServers_Click(object sender, EventArgs e)
-        {
-            ShowForm(new frmServer());
-        }
-
         private void btnCheckAll_Click(object sender, EventArgs e)
         {
             Parallel.ForEach(Global.StartItem, item =>
@@ -130,8 +129,8 @@ namespace SM.Forms.Forms
 
         private void cbRunFeatures_SelectedValueChanged(object sender, EventArgs e)
         {
-            var selectedItem = ((DropdownItemModel)cbRunFeatures.SelectedItem).Value;
-            if (selectedItem == -1)
+            var selectedItem = ((FeatureDropdownItemModel)cbRunFeatures.SelectedItem).Value;
+            if (selectedItem == Guid.Empty)
             {
                 if (memoryStartItems.NotNullOrEmpty())
                 {
@@ -147,7 +146,7 @@ namespace SM.Forms.Forms
             }
             else
             {
-                var featureItem = (FeatureType)selectedItem;
+                var featureItem = (Guid)selectedItem;
                 Parallel.ForEach(Global.StartItem, item =>
                 {
                     if (item.Features.Contains(featureItem))
@@ -172,6 +171,16 @@ namespace SM.Forms.Forms
         private void mtPublishDatabase_Click(object sender, EventArgs e)
         {
             ShowForm(new frmDatabase());
+        }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mtFeatures_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

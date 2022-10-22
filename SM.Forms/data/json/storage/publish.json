@@ -4,137 +4,175 @@
     "name": "Full Flow",
     "file_name": "000_publish_dev-full-Flow.bat",
     "publish_type": 0,
-    "description": "CoreService, PlanningStep, NonAccountWorkingPaperService, CommonToolService, AccountWorkingPaperService, FileServices, SPOProcessor, SPOApi, FileIntegrityCheckProcessor, ArchiveWebjob, ArchiveAPI, ContentProcessor, CarryfowardProcessor, CarryfowardContentProcessor, CarryfowardCopyENGProcessor, CarryfowardFileTransferProcessor, AuvenirDuplicateEngCommon, AuvenirDuplicateEngProcessor, AuvenirDuplicateFileProcessor"
+    "description": "CoreService, PlanningStep, NonAccountWorkingPaperService, CommonToolService, AccountWorkingPaperService, FileServices, SPOProcessor, SPOApi, FileIntegrityCheckProcessor, ArchiveWebjob, ArchiveAPI, ContentProcessor, CarryfowardProcessor, CarryfowardContentProcessor, CarryfowardCopyENGProcessor, CarryfowardFileTransferProcessor, AuvenirDuplicateEngCommon, AuvenirDuplicateEngProcessor, AuvenirDuplicateFileProcessor",
+    "order": 0
   },
   {
     "id": "d36ac654-bcbf-49e2-8554-91fae2c9ca52",
     "name": "Full Main Flow",
     "file_name": "00_publish_dev-full-MainFlow.bat",
     "publish_type": 0,
-    "description": "CoreService, PlanningStep, NonAccountWorkingPaperService, AccountWorkingPaperService, CommonToolService, FileServices, SPOProcessor, SPOAPI, FileIntegrityCheckProcessor, ArchiveWebjob, ArchiveAPI, ContentProcessor"
+    "description": "CoreService, PlanningStep, NonAccountWorkingPaperService, AccountWorkingPaperService, CommonToolService, FileServices, SPOProcessor, SPOAPI, FileIntegrityCheckProcessor, ArchiveWebjob, ArchiveAPI, ContentProcessor",
+    "order": 1
   },
   {
     "id": "4875ad96-7cbd-4504-9907-54e28a651ad7",
     "name": "Small Main Flow",
     "file_name": "01_publish_dev_small-MainFlow.bat",
     "publish_type": 0,
-    "description": "CoreService, PlanningStep, NonAccountWorkingPaperService, CommonToolService, AccountWorkingPaperService"
+    "description": "CoreService, PlanningStep, NonAccountWorkingPaperService, CommonToolService, AccountWorkingPaperService",
+    "order": 2
   },
   {
     "id": "97b6cff2-fe71-46fc-852a-016b09ddb356",
     "name": "Duplicate Engagement Feature",
     "file_name": "02_publish_dev-DuplicateEngagementFeature.bat",
     "publish_type": 0,
-    "description": "AuvenirDuplicateEngCommon, AuvenirDuplicateEngProcessor, AuvenirDuplicateFileProcessor"
+    "description": "AuvenirDuplicateEngCommon, AuvenirDuplicateEngProcessor, AuvenirDuplicateFileProcessor",
+    "order": 3
   },
   {
     "id": "6300ce95-a8e1-4164-a8a5-ce0876a802cb",
     "name": "Archive Feature",
     "file_name": "03_publish_dev-ArchiveFeature.bat",
     "publish_type": 0,
-    "description": "ArchiveWebjob, ArchiveAPI"
+    "description": "ArchiveWebjob, ArchiveAPI",
+    "order": 4
   },
   {
     "id": "28a0c3b7-870a-4abf-bf00-ae7cf80f5d8d",
     "name": "Carry Forward Feature",
     "file_name": "04_publish_dev-CarryForwardFeature.bat",
     "publish_type": 0,
-    "description": "CarryfowardProcessor, CarryfowardContentProcessor, CarryfowardCopyENGProcessor, CarryfowardFileTransferProcessor"
+    "description": "CarryfowardProcessor, CarryfowardContentProcessor, CarryfowardCopyENGProcessor, CarryfowardFileTransferProcessor",
+    "order": 5
   },
   {
     "id": "c1ad7b9a-ab83-4cc8-9378-c2a2402d749c",
     "name": "Account Working Paper Service",
     "file_name": "public_AccountWorkingPaperService.bat",
-    "publish_type": 1
+    "publish_type": 1,
+    "description": "AccountWorkingPaperService",
+    "order": 6
   },
   {
     "id": "1e72a496-3c3e-454c-b009-a2fad5b268e1",
     "name": "Archive API",
     "file_name": "publish__ArchiveAPI.bat",
-    "publish_type": 1
+    "publish_type": 1,
+    "description": "ArchiveApi",
+    "order": 7
   },
   {
     "id": "d264f1bd-c868-4823-807d-950a0a66ddaf",
     "name": "SPO API",
     "file_name": "publish__SPOAPI.bat",
-    "publish_type": 1
+    "publish_type": 1,
+    "description": "SPOApi",
+    "order": 8
   },
   {
     "id": "e06b354c-179d-48c6-803d-2b51337f22bb",
     "name": "Archival Webjob",
     "file_name": "publish_ArchivalWebjob.bat",
-    "publish_type": 1
+    "publish_type": 1,
+    "description": "ArchivalWebjob",
+    "order": 9
   },
   {
     "id": "937036c9-71f2-45eb-ac67-5172606284ea",
     "name": "Common Tool Service",
     "file_name": "publish_CommonToolService.bat",
-    "publish_type": 1
+    "publish_type": 1,
+    "description": "CommonToolService",
+    "order": 10
   },
   {
     "id": "383dee6b-8e73-4658-b52d-e902e8da0028",
     "name": "Component Creation Processor",
     "file_name": "publish_ComponentCreationProcessor.bat",
-    "publish_type": 1
+    "publish_type": 1,
+    "description": "ComponentCreationProcessor",
+    "order": 11
   },
   {
     "id": "66e0165d-01e5-4c7a-aa4d-a4589a296d90",
     "name": "Content Processor",
     "file_name": "publish_ContentProcessor.bat",
-    "publish_type": 1
+    "publish_type": 1,
+    "description": "ContentProcessor",
+    "order": 12
   },
   {
     "id": "d0f9da0b-4906-4d22-8abf-dc9232393f8b",
     "name": "Core",
     "file_name": "publish_core.bat",
-    "publish_type": 1
+    "publish_type": 1,
+    "description": "CoreService",
+    "order": 13
   },
   {
     "id": "03e0f9ea-5301-40da-b470-6c9de7333e2d",
     "name": "Engagement Creation Processor",
     "file_name": "publish_EngagementCreationProcessor.bat",
-    "publish_type": 1
+    "publish_type": 1,
+    "description": "EngagementCreationProcessor",
+    "order": 14
   },
   {
     "id": "450c16db-bba6-41ed-83da-2e0da88b0885",
     "name": "FE",
     "file_name": "publish_FE.bat",
-    "publish_type": 1
+    "publish_type": 1,
+    "description": "FE",
+    "order": 15
   },
   {
     "id": "e405d695-666f-4bdb-9084-6b98cc8ae617",
     "name": "File Interity Check",
     "file_name": "publish_fileinteritycheck.bat",
-    "publish_type": 1
+    "publish_type": 1,
+    "description": "FileInterityCheck",
+    "order": 16
   },
   {
     "id": "a7f81ebc-e594-4244-ab7e-9b23568ff829",
     "name": "File Services",
     "file_name": "publish_FileServiecs.bat",
-    "publish_type": 1
+    "publish_type": 1,
+    "description": "FileServices",
+    "order": 17
   },
   {
     "id": "243ff7b6-776e-4585-85f7-85fa6712b40a",
     "name": "NonAccount Working Paper",
     "file_name": "publish_nonAccountWp.bat",
-    "publish_type": 1
+    "publish_type": 1,
+    "description": "NonAccountWorkingPaperService",
+    "order": 18
   },
   {
     "id": "4d3cbd16-3058-42d1-ae52-53529d41674c",
     "name": "Planning",
     "file_name": "publish_Planning.bat",
-    "publish_type": 1
+    "publish_type": 1,
+    "description": "PlanningStepService",
+    "order": 19
   },
   {
     "id": "36aabb2d-794c-44d4-8be6-d797d2826797",
     "name": "SPO",
     "file_name": "publish_SPO.bat",
-    "publish_type": 1
+    "publish_type": 1,
+    "description": "SPOProcessor",
+    "order": 20
   },
   {
     "id": "afa98481-d18b-45c9-b95a-279e83f50afc",
     "name": "Wp Generation Processor",
     "file_name": "publish_WpGenerationProcessor.bat",
-    "publish_type": 1
+    "publish_type": 1,
+    "description": "WpGenerationProcessor",
+    "order": 21
   }
 ]

@@ -17,9 +17,12 @@ namespace SM.Shared.Constants
         #endregion
 
         #region [BAT Folder]
-        public const string SourceConfiguraion = "source_config" + FileExtensionContants.Bat;//app_config.bat
-        public const string OutputConfiguraion = "output_config" + FileExtensionContants.Bat;//app_config.bat
-        public const string PathConfiguraion = "path_config" + FileExtensionContants.Bat;//_path.bat
+        public const string SourceConfiguration = "source_config" + FileExtensionContants.Bat;//app_config.bat
+        public const string PathConfiguration = "path_config" + FileExtensionContants.Bat;//_path.bat
+        public const string MainConfiguration = "config_main" + FileExtensionContants.Bat;
+        public const string CFConfiguration = "config_cf" + FileExtensionContants.Bat;
+        public const string MainServerConfiguration = "config_server_main" + FileExtensionContants.Bat;
+        public const string CFServerConfiguration = "config_server_cf" + FileExtensionContants.Bat;
         #endregion
 
         #region [JSON Folder]
@@ -29,6 +32,7 @@ namespace SM.Shared.Constants
         public const string Publish = "publish" + FileExtensionContants.Json;//dataPublish.json
         public const string Database = "database" + FileExtensionContants.Json;//dataDatabase.json
         public const string Replace = "replace" + FileExtensionContants.Json;//store queue value to replace in the appsetting.json file
+        public const string Feature = "feature" + FileExtensionContants.Json;//store feature
         #endregion
 
         #region [Configuration]
@@ -38,6 +42,14 @@ namespace SM.Shared.Constants
         public const string Setting = "setting" + FileExtensionContants.Json;
         #endregion
 
+        #endregion
+
+        #region [SQL Solution & DACPAC]
+        public const string SQLSolutionRootFolder = "DatabaseDeployment";
+        public const string SQLSolution = SQLSolutionRootFolder + "\\DatabaseDeployment.sln";
+        public const string CatalogDACPAC = SQLSolutionRootFolder + "\\Catalog\\bin\\Local\\Catalog.dacpac";
+        public const string CoreDACPAC = SQLSolutionRootFolder + "\\Core\\bin\\Local\\Core.dacpac";
+        public const string WorkingPaperDACPAC = SQLSolutionRootFolder + "\\WorkingPaper\\bin\\Local\\WorkingPaper.dacpac";
         #endregion
     }
 }

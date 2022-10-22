@@ -2,14 +2,8 @@
 
 namespace SM.Models.Storage
 {
-    public class BaseModel
+    public class BaseModel : BaseItemModel
     {
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
-
-        [JsonPropertyName("name")]
-        public string Name { get; set; }
-
         [JsonPropertyName("file_name")]
         public string FileName { get; set; }
     }

@@ -33,5 +33,8 @@ namespace SM.Models.Configuration
 
         [JsonPropertyName("container_code")]
         public string ContainerCode { get; set; }
+
+        [JsonPropertyName("deployenv")]
+        public string DeployEnv { get; set; }
     }
 }

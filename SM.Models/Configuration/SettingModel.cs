@@ -13,9 +13,6 @@ namespace SM.Models.Configuration
         [JsonPropertyName("backup_data_folder")]
         public string BackupDataFolder { get; set; }
 
-        [JsonPropertyName("app_config")]
-        public string AppConfig { get; set; }
-
         [JsonPropertyName("project_folder")]
         public string ProjectFolder { get; set; }
 
@@ -30,5 +27,11 @@ namespace SM.Models.Configuration
 
         [JsonPropertyName("azureFuncTool_path")]
         public string AzureFuncToolPath { get; set; }
+
+        [JsonPropertyName("sqlcmd")]
+        public string SQLCMD { get; set; }
+
+        [JsonPropertyName("sql_package")]
+        public string SQLPackage { get; set; }
     }
 }

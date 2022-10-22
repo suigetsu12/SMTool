@@ -9,7 +9,7 @@ namespace SM.Models.Storage
         public bool IsChecked { get; set; }
 
         [JsonPropertyName("features")]
-        public List<FeatureType> Features { get; set; }
+        public List<Guid> Features { get; set; }
 
         [JsonIgnore]
         public int ProcessId { get; set; }

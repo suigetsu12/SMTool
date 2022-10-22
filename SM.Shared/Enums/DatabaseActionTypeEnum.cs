@@ -8,10 +8,10 @@ namespace SM.Shared.Enums
 {
     public enum DatabaseActionType
     {
-        DEPLOY = 0,
-        MIGRATE = 1,
-        DROP = 2,
-        BACKUP = 3,
-        RESTORE = 4
+        Deploy = 0,
+        Migrate = 1,
+        Drop = 2,
+        Backup = 3,
+        Restore = 4
     }
 }

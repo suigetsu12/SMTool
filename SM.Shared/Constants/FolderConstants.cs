@@ -9,18 +9,14 @@ namespace SM.Shared.Constants
     public static class FolderConstants
     {
         public const string Root = "data\\";
+        public const string BackupDataFolder = "database";
+        public const string PublishFolder = "publish";
         public class Bat
         {
             public const string Root = FolderConstants.Root + "bat\\";
             public const string Start = Root + "start\\";
             public const string Publish = Root + "publish\\";
             public const string Database = Root + "database\\";
-            public const string Configuration = Root + "configuration\\";
-        }
-
-        public class Sql
-        {
-            public const string Root = FolderConstants.Root + "sql\\";
         }
 
         public class Json

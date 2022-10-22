@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDatabase));
             this.pnItems = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdbDrop = new System.Windows.Forms.RadioButton();
@@ -70,6 +71,7 @@
             this.rdbDrop.TabStop = true;
             this.rdbDrop.Text = "Drop";
             this.rdbDrop.UseVisualStyleBackColor = true;
+            this.rdbDrop.CheckedChanged += new System.EventHandler(this.rdbDrop_CheckedChanged);
             // 
             // rdbRestore
             // 
@@ -81,6 +83,7 @@
             this.rdbRestore.TabStop = true;
             this.rdbRestore.Text = "Restore";
             this.rdbRestore.UseVisualStyleBackColor = true;
+            this.rdbRestore.CheckedChanged += new System.EventHandler(this.rdbRestore_CheckedChanged);
             // 
             // rdbBackup
             // 
@@ -92,6 +95,7 @@
             this.rdbBackup.TabStop = true;
             this.rdbBackup.Text = "Backup";
             this.rdbBackup.UseVisualStyleBackColor = true;
+            this.rdbBackup.CheckedChanged += new System.EventHandler(this.rdbBackup_CheckedChanged);
             // 
             // rdbMigrate
             // 
@@ -103,6 +107,7 @@
             this.rdbMigrate.TabStop = true;
             this.rdbMigrate.Text = "Migrate";
             this.rdbMigrate.UseVisualStyleBackColor = true;
+            this.rdbMigrate.CheckedChanged += new System.EventHandler(this.rdbMigrate_CheckedChanged);
             // 
             // rdbDeploy
             // 
@@ -114,6 +119,7 @@
             this.rdbDeploy.TabStop = true;
             this.rdbDeploy.Text = "Deploy";
             this.rdbDeploy.UseVisualStyleBackColor = true;
+            this.rdbDeploy.CheckedChanged += new System.EventHandler(this.rdbDeploy_CheckedChanged);
             // 
             // btnRun
             // 
@@ -125,6 +131,7 @@
             this.btnRun.TabIndex = 8;
             this.btnRun.Text = "Run";
             this.btnRun.UseVisualStyleBackColor = false;
+            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
             // 
             // frmDatabase
             // 
@@ -135,6 +142,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnRun);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmDatabase";

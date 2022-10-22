@@ -13,5 +13,10 @@ namespace SM.Shared.Extensions
 
         public static bool NotNullOrEmpty(this string target) 
             => !string.IsNullOrEmpty(target);
+
+        public static bool IsNullOrEmpty<T>(this IEnumerable<T> source)
+        {
+            return (source?.Any() ?? false) == false;
+        }
     }
 }
