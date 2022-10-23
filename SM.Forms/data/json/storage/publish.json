@@ -53,6 +53,10 @@
     "file_name": "public_AccountWorkingPaperService.bat",
     "publish_type": 1,
     "description": "AccountWorkingPaperService",
+    "project_folder": "AccountWorkingPaperService\\Auvenir.WorkingPaper",
+    "project_param": "wpSourceUrl",
+    "output_folder": "AccountWorkingPaperService",
+    "output_param": "wpOutputUrl",
     "order": 6
   },
   {
@@ -61,6 +65,10 @@
     "file_name": "publish__ArchiveAPI.bat",
     "publish_type": 1,
     "description": "ArchiveApi",
+    "project_folder": "ArchivingWebAPI\\Archiving.WebAPI",
+    "project_param": "archiveApiSourceUrl",
+    "output_folder": "ArchivingWebAPI",
+    "output_param": "archiveApiOutputUrl",
     "order": 7
   },
   {
@@ -69,6 +77,10 @@
     "file_name": "publish__SPOAPI.bat",
     "publish_type": 1,
     "description": "SPOApi",
+    "project_folder": "SPOApi",
+    "project_param": "spoApiSourceUrl",
+    "output_folder": "SPOApi",
+    "output_param": "spoApiOutputUrl",
     "order": 8
   },
   {
@@ -77,6 +89,10 @@
     "file_name": "publish_ArchivalWebjob.bat",
     "publish_type": 1,
     "description": "ArchivalWebjob",
+    "project_folder": "ArchivingWebJob\\Archiving.WebJob",
+    "project_param": "archiveSourceUrl",
+    "output_folder": "ArchivingWebJob",
+    "output_param": "archiveOutputUrl",
     "order": 9
   },
   {
@@ -85,15 +101,11 @@
     "file_name": "publish_CommonToolService.bat",
     "publish_type": 1,
     "description": "CommonToolService",
+    "project_folder": "CommonToolService",
+    "project_param": "pm_snSourceUrl",
+    "output_folder": "CommonToolService",
+    "output_param": "pm_snOutputUrl",
     "order": 10
-  },
-  {
-    "id": "383dee6b-8e73-4658-b52d-e902e8da0028",
-    "name": "Component Creation Processor",
-    "file_name": "publish_ComponentCreationProcessor.bat",
-    "publish_type": 1,
-    "description": "ComponentCreationProcessor",
-    "order": 11
   },
   {
     "id": "66e0165d-01e5-4c7a-aa4d-a4589a296d90",
@@ -101,7 +113,11 @@
     "file_name": "publish_ContentProcessor.bat",
     "publish_type": 1,
     "description": "ContentProcessor",
-    "order": 12
+    "project_folder": "ContentProcessorService\\Auvenir.ContentProcessor",
+    "project_param": "contentProcessorSourceUrl",
+    "output_folder": "ContentProcessor",
+    "output_param": "contentProcessorOutputUrl",
+    "order": 11
   },
   {
     "id": "d0f9da0b-4906-4d22-8abf-dc9232393f8b",
@@ -109,15 +125,11 @@
     "file_name": "publish_core.bat",
     "publish_type": 1,
     "description": "CoreService",
-    "order": 13
-  },
-  {
-    "id": "03e0f9ea-5301-40da-b470-6c9de7333e2d",
-    "name": "Engagement Creation Processor",
-    "file_name": "publish_EngagementCreationProcessor.bat",
-    "publish_type": 1,
-    "description": "EngagementCreationProcessor",
-    "order": 14
+    "project_folder": "CoreService\\Auvenir.Web",
+    "project_param": "coreSourceUrl",
+    "output_folder": "CoreService",
+    "output_param": "coreOutputUrl",
+    "order": 12
   },
   {
     "id": "450c16db-bba6-41ed-83da-2e0da88b0885",
@@ -125,7 +137,11 @@
     "file_name": "publish_FE.bat",
     "publish_type": 1,
     "description": "FE",
-    "order": 15
+    "project_folder": "FrontEnd",
+    "project_param": "feSourceUrl",
+    "output_folder": "FrontEnd",
+    "output_param": "feOutputUrl",
+    "order": 13
   },
   {
     "id": "e405d695-666f-4bdb-9084-6b98cc8ae617",
@@ -133,7 +149,11 @@
     "file_name": "publish_fileinteritycheck.bat",
     "publish_type": 1,
     "description": "FileInterityCheck",
-    "order": 16
+    "project_folder": "FileIntegrityCheckProcessor\\Auvenir.FileIntegrityCheckProcessor",
+    "project_param": "fileIntegrityCheckProcessorUrl",
+    "output_folder": "FileIntegrityCheckProcessor",
+    "output_param": "fileIntegrityCheckProcessorOutputUrl",
+    "order": 14
   },
   {
     "id": "a7f81ebc-e594-4244-ab7e-9b23568ff829",
@@ -141,7 +161,11 @@
     "file_name": "publish_FileServiecs.bat",
     "publish_type": 1,
     "description": "FileServices",
-    "order": 17
+    "project_folder": "FileService\\Auvenir.FileService.WebApi",
+    "project_param": "fileServicesUrl",
+    "output_folder": "FileServices",
+    "output_param": "fsOutputUrl",
+    "order": 15
   },
   {
     "id": "243ff7b6-776e-4585-85f7-85fa6712b40a",
@@ -149,7 +173,11 @@
     "file_name": "publish_nonAccountWp.bat",
     "publish_type": 1,
     "description": "NonAccountWorkingPaperService",
-    "order": 18
+    "project_folder": "NonAccountWorkingPaperService",
+    "project_param": "pm_vsaSourceUrl",
+    "output_folder": "NonAccountWorkingPaperService",
+    "output_param": "pm_vsaOutputUrl",
+    "order": 16
   },
   {
     "id": "4d3cbd16-3058-42d1-ae52-53529d41674c",
@@ -157,7 +185,11 @@
     "file_name": "publish_Planning.bat",
     "publish_type": 1,
     "description": "PlanningStepService",
-    "order": 19
+    "project_folder": "PlanningStepService\\PlanningStep",
+    "project_param": "pm_psSourceUrl",
+    "output_folder": "PlanningStepService",
+    "output_param": "pm_psOutputUrl",
+    "order": 17
   },
   {
     "id": "36aabb2d-794c-44d4-8be6-d797d2826797",
@@ -165,14 +197,10 @@
     "file_name": "publish_SPO.bat",
     "publish_type": 1,
     "description": "SPOProcessor",
-    "order": 20
-  },
-  {
-    "id": "afa98481-d18b-45c9-b95a-279e83f50afc",
-    "name": "Wp Generation Processor",
-    "file_name": "publish_WpGenerationProcessor.bat",
-    "publish_type": 1,
-    "description": "WpGenerationProcessor",
-    "order": 21
+    "project_folder": "SPOSetupProcessor",
+    "project_param": "spo_SPOSetupProcessorSourceUrl",
+    "output_folder": "SPOSetupProcessor",
+    "output_param": "spo_SPOSetupProcessorOutputUrl",
+    "order": 18
   }
 ]

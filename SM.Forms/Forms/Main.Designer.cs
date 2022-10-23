@@ -111,7 +111,7 @@
             // mtConfiguration
             // 
             this.mtConfiguration.Name = "mtConfiguration";
-            this.mtConfiguration.Size = new System.Drawing.Size(183, 26);
+            this.mtConfiguration.Size = new System.Drawing.Size(224, 26);
             this.mtConfiguration.Text = "Configuration";
             this.mtConfiguration.Click += new System.EventHandler(this.mtConfiguration_Click);
             // 
@@ -124,38 +124,39 @@
             this.mtDatabase,
             this.mtReplaceConfig});
             this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
-            this.dataToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
+            this.dataToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.dataToolStripMenuItem.Text = "Data";
             // 
             // mtFeature
             // 
             this.mtFeature.Name = "mtFeature";
-            this.mtFeature.Size = new System.Drawing.Size(193, 26);
+            this.mtFeature.Size = new System.Drawing.Size(224, 26);
             this.mtFeature.Text = "Feature";
             // 
             // mtPublish
             // 
             this.mtPublish.Name = "mtPublish";
-            this.mtPublish.Size = new System.Drawing.Size(193, 26);
+            this.mtPublish.Size = new System.Drawing.Size(224, 26);
             this.mtPublish.Text = "Publish";
             this.mtPublish.Click += new System.EventHandler(this.mtPublish_Click);
             // 
             // mtStart
             // 
             this.mtStart.Name = "mtStart";
-            this.mtStart.Size = new System.Drawing.Size(193, 26);
+            this.mtStart.Size = new System.Drawing.Size(224, 26);
             this.mtStart.Text = "Start";
+            this.mtStart.Click += new System.EventHandler(this.mtStart_Click);
             // 
             // mtDatabase
             // 
             this.mtDatabase.Name = "mtDatabase";
-            this.mtDatabase.Size = new System.Drawing.Size(193, 26);
+            this.mtDatabase.Size = new System.Drawing.Size(224, 26);
             this.mtDatabase.Text = "Database";
             // 
             // mtReplaceConfig
             // 
             this.mtReplaceConfig.Name = "mtReplaceConfig";
-            this.mtReplaceConfig.Size = new System.Drawing.Size(193, 26);
+            this.mtReplaceConfig.Size = new System.Drawing.Size(224, 26);
             this.mtReplaceConfig.Text = "Replace Config";
             // 
             // panel1

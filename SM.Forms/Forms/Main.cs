@@ -205,5 +205,10 @@ namespace SM.Forms.Forms
                     row.Cells["clMessage"].Style.ForeColor = Color.Black;
             }
         }
+
+        private void mtStart_Click(object sender, EventArgs e)
+        {
+            ShowForm(new frmDataStart());
+        }
     }
 }

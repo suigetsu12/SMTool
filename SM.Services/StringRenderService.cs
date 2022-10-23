@@ -96,5 +96,25 @@ namespace SM.Services
             string stringData = string.Join('\n', strList.ToArray());
             return stringData;
         }
+
+        public string RenderSourceConfiguration(List<SourceConfigItemModel> listProject, List<SourceConfigItemModel> listOutput)
+        {
+            List<string> strList = new List<string>();
+            strList.Add($"call path_config.bat");
+            strList.Add($":: --------------------------- The PATH of all project  ----------------------------------------");
+            foreach (var project in listProject)
+            {
+                strList.Add($"set {project.Param}=%rootPathProject%{project.Folder}");
+                strList.Add($"");
+            }
+            strList.Add($":: --------------------------- The PATH you want to build to  ----------------------------------");
+            foreach (var output in listOutput)
+            {
+                strList.Add($"set {output.Param}=%rootPathStart%{output.Folder}");
+                strList.Add($"");
+            }
+            string stringData = string.Join('\n', strList.ToArray());
+            return stringData;
+        }
     }
 }

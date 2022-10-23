@@ -87,16 +87,10 @@
     <None Update="data\bat\publish\publish_CommonToolService.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="data\bat\publish\publish_ComponentCreationProcessor.bat">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="data\bat\publish\publish_ContentProcessor.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="data\bat\publish\publish_core.bat">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="data\bat\publish\publish_EngagementCreationProcessor.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="data\bat\publish\publish_FE.bat">
@@ -115,9 +109,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="data\bat\publish\publish_SPO.bat">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="data\bat\publish\publish_WpGenerationProcessor.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="data\bat\publish\publish__ArchiveAPI.bat">

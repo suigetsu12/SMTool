@@ -50,6 +50,14 @@
             this.txtContent = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lbIdSelected = new System.Windows.Forms.Label();
+            this.txtProjectFolder = new System.Windows.Forms.TextBox();
+            this.lbProjectFolder = new System.Windows.Forms.Label();
+            this.txtOutputFolder = new System.Windows.Forms.TextBox();
+            this.lbOutputFolder = new System.Windows.Forms.Label();
+            this.txtOutputParam = new System.Windows.Forms.TextBox();
+            this.lbOutputParam = new System.Windows.Forms.Label();
+            this.txtProjectParam = new System.Windows.Forms.TextBox();
+            this.lbProjectParam = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPublish)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -77,7 +85,7 @@
             this.dgvPublish.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvPublish.RowTemplate.Height = 29;
             this.dgvPublish.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPublish.Size = new System.Drawing.Size(324, 481);
+            this.dgvPublish.Size = new System.Drawing.Size(324, 553);
             this.dgvPublish.TabIndex = 0;
             this.dgvPublish.SelectionChanged += new System.EventHandler(this.dgvPublish_SelectionChanged);
             // 
@@ -140,7 +148,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(656, 499);
+            this.btnAdd.Location = new System.Drawing.Point(740, 541);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(94, 29);
             this.btnAdd.TabIndex = 1;
@@ -150,13 +158,12 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(656, 499);
+            this.btnUpdate.Location = new System.Drawing.Point(640, 541);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(94, 29);
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Visible = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnNew
@@ -165,16 +172,16 @@
             this.btnNew.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.btnNew.Location = new System.Drawing.Point(342, 12);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(94, 29);
+            this.btnNew.Size = new System.Drawing.Size(170, 29);
             this.btnNew.TabIndex = 3;
-            this.btnNew.Text = "New";
+            this.btnNew.Text = "Clean All Fields";
             this.btnNew.UseVisualStyleBackColor = false;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(349, 50);
+            this.label1.Location = new System.Drawing.Point(385, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 20);
             this.label1.TabIndex = 4;
@@ -182,22 +189,22 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(434, 47);
+            this.txtName.Location = new System.Drawing.Point(440, 47);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(184, 27);
+            this.txtName.Size = new System.Drawing.Size(163, 27);
             this.txtName.TabIndex = 5;
             // 
             // txtFileName
             // 
-            this.txtFileName.Location = new System.Drawing.Point(434, 80);
+            this.txtFileName.Location = new System.Drawing.Point(440, 80);
             this.txtFileName.Name = "txtFileName";
-            this.txtFileName.Size = new System.Drawing.Size(184, 27);
+            this.txtFileName.Size = new System.Drawing.Size(163, 27);
             this.txtFileName.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(349, 83);
+            this.label2.Location = new System.Drawing.Point(358, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 20);
             this.label2.TabIndex = 6;
@@ -205,17 +212,17 @@
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(434, 113);
+            this.txtDescription.Location = new System.Drawing.Point(440, 113);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtDescription.Size = new System.Drawing.Size(316, 80);
+            this.txtDescription.Size = new System.Drawing.Size(163, 93);
             this.txtDescription.TabIndex = 9;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(349, 116);
+            this.label3.Location = new System.Drawing.Point(349, 108);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 20);
             this.label3.TabIndex = 8;
@@ -231,40 +238,42 @@
             this.rdFeature.TabStop = true;
             this.rdFeature.Text = "Feature";
             this.rdFeature.UseVisualStyleBackColor = true;
+            this.rdFeature.CheckedChanged += new System.EventHandler(this.rdFeature_CheckedChanged);
             // 
             // rdFunction
             // 
             this.rdFunction.AutoSize = true;
-            this.rdFunction.Location = new System.Drawing.Point(3, 36);
+            this.rdFunction.Location = new System.Drawing.Point(103, 3);
             this.rdFunction.Name = "rdFunction";
             this.rdFunction.Size = new System.Drawing.Size(86, 24);
             this.rdFunction.TabIndex = 11;
             this.rdFunction.TabStop = true;
             this.rdFunction.Text = "Function";
             this.rdFunction.UseVisualStyleBackColor = true;
+            this.rdFunction.CheckedChanged += new System.EventHandler(this.rdFunction_CheckedChanged);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.rdFeature);
             this.panel1.Controls.Add(this.rdFunction);
-            this.panel1.Location = new System.Drawing.Point(624, 45);
+            this.panel1.Location = new System.Drawing.Point(613, 43);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(126, 66);
+            this.panel1.Size = new System.Drawing.Size(221, 31);
             this.panel1.TabIndex = 12;
             // 
             // txtContent
             // 
-            this.txtContent.Location = new System.Drawing.Point(349, 226);
+            this.txtContent.Location = new System.Drawing.Point(349, 234);
             this.txtContent.Multiline = true;
             this.txtContent.Name = "txtContent";
             this.txtContent.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtContent.Size = new System.Drawing.Size(401, 267);
+            this.txtContent.Size = new System.Drawing.Size(485, 301);
             this.txtContent.TabIndex = 13;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(349, 203);
+            this.label4.Location = new System.Drawing.Point(349, 211);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 20);
             this.label4.TabIndex = 14;
@@ -279,11 +288,91 @@
             this.lbIdSelected.TabIndex = 15;
             this.lbIdSelected.Visible = false;
             // 
+            // txtProjectFolder
+            // 
+            this.txtProjectFolder.Location = new System.Drawing.Point(716, 80);
+            this.txtProjectFolder.Name = "txtProjectFolder";
+            this.txtProjectFolder.Size = new System.Drawing.Size(118, 27);
+            this.txtProjectFolder.TabIndex = 17;
+            this.txtProjectFolder.Visible = false;
+            // 
+            // lbProjectFolder
+            // 
+            this.lbProjectFolder.AutoSize = true;
+            this.lbProjectFolder.Location = new System.Drawing.Point(609, 83);
+            this.lbProjectFolder.Name = "lbProjectFolder";
+            this.lbProjectFolder.Size = new System.Drawing.Size(101, 20);
+            this.lbProjectFolder.TabIndex = 16;
+            this.lbProjectFolder.Text = "Project Folder";
+            this.lbProjectFolder.Visible = false;
+            // 
+            // txtOutputFolder
+            // 
+            this.txtOutputFolder.Location = new System.Drawing.Point(716, 146);
+            this.txtOutputFolder.Name = "txtOutputFolder";
+            this.txtOutputFolder.Size = new System.Drawing.Size(118, 27);
+            this.txtOutputFolder.TabIndex = 19;
+            this.txtOutputFolder.Visible = false;
+            // 
+            // lbOutputFolder
+            // 
+            this.lbOutputFolder.AutoSize = true;
+            this.lbOutputFolder.Location = new System.Drawing.Point(609, 149);
+            this.lbOutputFolder.Name = "lbOutputFolder";
+            this.lbOutputFolder.Size = new System.Drawing.Size(101, 20);
+            this.lbOutputFolder.TabIndex = 18;
+            this.lbOutputFolder.Text = "Output Folder";
+            this.lbOutputFolder.Visible = false;
+            // 
+            // txtOutputParam
+            // 
+            this.txtOutputParam.Location = new System.Drawing.Point(716, 179);
+            this.txtOutputParam.Name = "txtOutputParam";
+            this.txtOutputParam.Size = new System.Drawing.Size(118, 27);
+            this.txtOutputParam.TabIndex = 23;
+            this.txtOutputParam.Visible = false;
+            // 
+            // lbOutputParam
+            // 
+            this.lbOutputParam.AutoSize = true;
+            this.lbOutputParam.Location = new System.Drawing.Point(609, 182);
+            this.lbOutputParam.Name = "lbOutputParam";
+            this.lbOutputParam.Size = new System.Drawing.Size(100, 20);
+            this.lbOutputParam.TabIndex = 22;
+            this.lbOutputParam.Text = "Output Param";
+            this.lbOutputParam.Visible = false;
+            // 
+            // txtProjectParam
+            // 
+            this.txtProjectParam.Location = new System.Drawing.Point(716, 113);
+            this.txtProjectParam.Name = "txtProjectParam";
+            this.txtProjectParam.Size = new System.Drawing.Size(118, 27);
+            this.txtProjectParam.TabIndex = 21;
+            this.txtProjectParam.Visible = false;
+            // 
+            // lbProjectParam
+            // 
+            this.lbProjectParam.AutoSize = true;
+            this.lbProjectParam.Location = new System.Drawing.Point(630, 116);
+            this.lbProjectParam.Name = "lbProjectParam";
+            this.lbProjectParam.Size = new System.Drawing.Size(80, 20);
+            this.lbProjectParam.TabIndex = 20;
+            this.lbProjectParam.Text = "Proj Param";
+            this.lbProjectParam.Visible = false;
+            // 
             // frmDataPublish
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(762, 540);
+            this.ClientSize = new System.Drawing.Size(843, 577);
+            this.Controls.Add(this.txtOutputParam);
+            this.Controls.Add(this.lbOutputParam);
+            this.Controls.Add(this.txtProjectParam);
+            this.Controls.Add(this.lbProjectParam);
+            this.Controls.Add(this.txtOutputFolder);
+            this.Controls.Add(this.lbOutputFolder);
+            this.Controls.Add(this.txtProjectFolder);
+            this.Controls.Add(this.lbProjectFolder);
             this.Controls.Add(this.lbIdSelected);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtContent);
@@ -336,5 +425,13 @@
         private DataGridViewTextBoxColumn clPublishType;
         private DataGridViewTextBoxColumn clOrder;
         private Label lbIdSelected;
+        private TextBox txtProjectFolder;
+        private Label lbProjectFolder;
+        private TextBox txtOutputFolder;
+        private Label lbOutputFolder;
+        private TextBox txtOutputParam;
+        private Label lbOutputParam;
+        private TextBox txtProjectParam;
+        private Label lbProjectParam;
     }
 }

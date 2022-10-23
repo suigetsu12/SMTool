@@ -1,5 +1,7 @@
 ﻿using SM.Models;
+using SM.Models.Configuration;
 using SM.Models.Storage;
+using SM.Services;
 using SM.Shared.Constants;
 using SM.Shared.Extensions;
 using SM.Shared.Helpers;
@@ -19,6 +21,7 @@ namespace SM.Forms.Forms.Settings.Data
     {
         private List<PublishItemModel> items = new List<PublishItemModel>();
         private string _publishPath = string.Empty;
+        private StringRenderService _stringRenderService = new StringRenderService();
         public frmDataPublish()
         {
             _publishPath = Path.Combine(Global.RootAppFolderPath, PathConstants.Js_Publish);
@@ -48,8 +51,7 @@ namespace SM.Forms.Forms.Settings.Data
         private void btnNew_Click(object sender, EventArgs e)
         {
             CleanFields();
-            btnAdd.Visible = true;
-            btnUpdate.Visible = false;
+            btnUpdate.Enabled = false;
         }
 
         private void CleanFields()
@@ -58,6 +60,10 @@ namespace SM.Forms.Forms.Settings.Data
             txtDescription.Text = "";
             txtFileName.Text = "";
             txtContent.Text = "";
+            txtProjectFolder.Text = "";
+            txtProjectParam.Text = "";
+            txtOutputFolder.Text = "";
+            txtOutputParam.Text = "";
             lbIdSelected.Text = "";
             rdFeature.Checked = false;
             rdFunction.Checked = false;
@@ -77,6 +83,10 @@ namespace SM.Forms.Forms.Settings.Data
                 Id = Guid.NewGuid(),
                 Name = txtName.Text.Trim(),
                 FileName = txtFileName.Text.Trim(),
+                ProjectFolder = txtProjectFolder.Text.Trim(),
+                ProjectParam = txtProjectParam.Text.Trim(),
+                OutputFolder = txtOutputFolder.Text.Trim(),
+                OutputParam = txtOutputParam.Text.Trim(),
                 Description = txtDescription.Text.Trim(),
                 PublishType = rdFeature.Checked ? Shared.Enums.PublishType.Feature : Shared.Enums.PublishType.Function,
                 Order = lastOrder + 1
@@ -89,8 +99,7 @@ namespace SM.Forms.Forms.Settings.Data
                 var resultWrite = WriteContent(newItem.FileName);
                 if (resultWrite)
                 {
-                    BindData();
-                    MessageBox.Show(MessageConstans.Success);
+                    Success(newItem.PublishType);
                 }
                 else
                 {
@@ -125,19 +134,26 @@ namespace SM.Forms.Forms.Settings.Data
                 }
                 item.Name = txtName.Text.Trim();
                 item.FileName = txtFileName.Text.Trim();
+                item.ProjectFolder = txtProjectFolder.Text.Trim();
+                item.ProjectParam = txtProjectParam.Text.Trim();
+                item.OutputFolder = txtOutputFolder.Text.Trim();
+                item.OutputParam = txtOutputParam.Text.Trim();
                 item.Description = txtDescription.Text.Trim();
                 item.PublishType = rdFeature.Checked ? Shared.Enums.PublishType.Feature : Shared.Enums.PublishType.Function;
                 var jsonData = JsonHelper.Serializer(items);
                 var result = FileHelper.WriteFile(_publishPath, jsonData);
-                if (result)
+                if (!result)
+                {
+                    MessageBox.Show(MessageConstans.Failed);
+                }
+                else
                 {
                     if (hasChangeFileName)
                     {
                         var resultRename = FileHelper.RenameFile(oldPathFile, newPathFile, txtContent.Text);
                         if (resultRename)
                         {
-                            BindData();
-                            MessageBox.Show(MessageConstans.Success);
+                            Success(item.PublishType);
                         }
                         else
                         {
@@ -146,29 +162,43 @@ namespace SM.Forms.Forms.Settings.Data
                     }
                     else
                     {
-                        BindData();
-                        MessageBox.Show(MessageConstans.Success);
+                        Success(item.PublishType);
                     }
                 }
-                else
-                {
-                    MessageBox.Show(MessageConstans.Failed);
-                }
             }
+        }
+
+        private void Success(Shared.Enums.PublishType type)
+        {
+            BindData();
+            MessageBox.Show(MessageConstans.Success);
+            if (type == Shared.Enums.PublishType.Function)
+                UpdateSourceCofig();
         }
 
         private string Validation(bool isUpdate = false)
         {
             if (isUpdate && !lbIdSelected.Text.NotNullOrEmpty())
                 return MessageConstans.NoDataSelected;
-            if (!txtName.Text.NotNullOrEmpty())
-                return String.Format(MessageConstans.TheFieldEmpty, "name");
             if (!txtFileName.Text.NotNullOrEmpty())
                 return String.Format(MessageConstans.TheFieldEmpty, "file name");
+            if (!txtName.Text.NotNullOrEmpty())
+                return String.Format(MessageConstans.TheFieldEmpty, "name");
             if (!txtFileName.Text.EndsWith(".bat"))
                 return MessageConstans.WrongFormatFile;
             if (!rdFeature.Checked && !rdFunction.Checked)
                 return String.Format(MessageConstans.TheFieldEmpty, "publish type");
+            if (rdFunction.Checked)
+            {
+                if (!txtProjectFolder.Text.NotNullOrEmpty())
+                    return String.Format(MessageConstans.TheFieldEmpty, "project folder");
+                if (!txtProjectParam.Text.NotNullOrEmpty())
+                    return String.Format(MessageConstans.TheFieldEmpty, "project param");
+                if (!txtOutputFolder.Text.NotNullOrEmpty())
+                    return String.Format(MessageConstans.TheFieldEmpty, "output folder");
+                if (!txtOutputParam.Text.NotNullOrEmpty())
+                    return String.Format(MessageConstans.TheFieldEmpty, "output param");
+            }
 
             var exist = items.FirstOrDefault(i => i.Name == txtName.Text.Trim() || i.FileName == txtFileName.Text.Trim());
             if (exist != null)
@@ -196,6 +226,10 @@ namespace SM.Forms.Forms.Settings.Data
                         txtName.Text = item.Name;
                         txtFileName.Text = item.FileName;
                         txtDescription.Text = item.Description;
+                        txtProjectFolder.Text = item.ProjectFolder;
+                        txtProjectParam.Text = item.ProjectParam;
+                        txtOutputFolder.Text = item.OutputFolder;
+                        txtOutputParam.Text = item.OutputParam;
                         if (item.PublishType == Shared.Enums.PublishType.Feature)
                         {
                             rdFeature.Checked = true;
@@ -207,8 +241,7 @@ namespace SM.Forms.Forms.Settings.Data
                             rdFunction.Checked = true;
                         }
                         ReadContent(item.FileName);
-                        btnAdd.Visible = false;
-                        btnUpdate.Visible = true;
+                        btnUpdate.Enabled = true;
                     }
                 }
             }
@@ -225,6 +258,46 @@ namespace SM.Forms.Forms.Settings.Data
         {
             var path = Path.Combine(Global.RootAppFolderPath, FolderConstants.Bat.Publish, filename);
             return FileHelper.WriteFile(path, txtContent.Text);
+        }
+
+        private void ShowHideFuncNeedFields(bool isShow)
+        {
+            lbProjectFolder.Visible = isShow;
+            lbProjectParam.Visible = isShow;
+            lbOutputFolder.Visible = isShow;
+            lbOutputParam.Visible = isShow;
+            txtProjectFolder.Visible = isShow;
+            txtProjectParam.Visible = isShow;
+            txtOutputFolder.Visible = isShow;
+            txtOutputParam.Visible = isShow;
+        }
+
+        private void rdFeature_CheckedChanged(object sender, EventArgs e)
+        {
+            ShowHideFuncNeedFields(false);
+        }
+
+        private void rdFunction_CheckedChanged(object sender, EventArgs e)
+        {
+            ShowHideFuncNeedFields(true);
+        }
+
+        private void UpdateSourceCofig()
+        {
+            var listFunctions = items.Where(i => i.PublishType == Shared.Enums.PublishType.Function).ToList();
+            var listProject = listFunctions.Select(s => new SourceConfigItemModel
+            {
+                Folder = s.ProjectFolder,
+                Param = s.ProjectParam
+            }).ToList();
+            var listOutput = listFunctions.Select(s => new SourceConfigItemModel
+            {
+                Folder = s.OutputFolder,
+                Param = s.OutputParam
+            }).ToList();
+            var stringData = _stringRenderService.RenderSourceConfiguration(listProject, listOutput);
+            var path = Path.Combine(Global.RootAppFolderPath, PathConstants.Bat_Source);
+            FileHelper.WriteFile(path, stringData);
         }
     }
 }
