@@ -15,7 +15,7 @@ namespace SM.Shared.Helpers
 
                 if (!File.Exists(path))
                 {
-                    using (FileStream fs = File.Create(path)) ;
+                    using (FileStream fs = File.Create(path));
                 }
                 File.WriteAllText(path, jsonString);
                 return true;
@@ -43,20 +43,21 @@ namespace SM.Shared.Helpers
             return jsonString;
         }
 
-        public static bool WriteNewFile(string path, string jsonString)
+        public static bool RenameFile(string oldPath, string newPath, string jsonString = null)
         {
             try
             {
-                if (!path.NotNullOrEmpty() || !jsonString.NotNullOrEmpty())
+                if (!oldPath.NotNullOrEmpty() || !newPath.NotNullOrEmpty())
                 {
                     return false;
                 }
-
-                if (!File.Exists(path))
+                if (jsonString.NotNullOrEmpty())
                 {
-                    using (FileStream fs = File.Create(path)) ;
-                    File.WriteAllText(path, jsonString);
+                    File.WriteAllText(oldPath, jsonString);
                 }
+
+                File.Move(oldPath, newPath);
+
                 return true;
             }
             catch

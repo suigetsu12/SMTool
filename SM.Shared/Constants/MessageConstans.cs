@@ -17,5 +17,6 @@ namespace SM.Shared.Constants
         public const string PleaseInputNameAndFileName = "Please input name and file name.";
         public const string NoDataSelected = "No data selected.";
         public const string TheFieldEmpty = "The {0} is empty.";
+        public const string WrongFormatFile = "Wrong format file.";
     }
 }

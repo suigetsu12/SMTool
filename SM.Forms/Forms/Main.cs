@@ -1,5 +1,6 @@
 ﻿using SM.Forms.Forms.Publishes;
 using SM.Forms.Forms.Settings;
+using SM.Forms.Forms.Settings.Data;
 using SM.Models;
 using SM.Models.Controls;
 using SM.Models.Storage;
@@ -181,6 +182,28 @@ namespace SM.Forms.Forms
         private void mtFeatures_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void mtPublish_Click(object sender, EventArgs e)
+        {
+            ShowForm(new frmDataPublish());
+        }
+
+        private void dgvStart_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvStart.Rows)
+            {
+                var value = row.Cells["clMessage"].Value?.ToString();
+                if (value.NotNullOrEmpty())
+                {
+                    if (value == MessageConstans.Running)
+                        row.Cells["clMessage"].Style.ForeColor = Color.Blue;
+                    else
+                        row.Cells["clMessage"].Style.ForeColor = Color.Red;
+                }
+                else
+                    row.Cells["clMessage"].Style.ForeColor = Color.Black;
+            }
         }
     }
 }

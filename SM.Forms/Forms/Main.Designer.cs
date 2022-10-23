@@ -30,11 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mtConfiguration = new System.Windows.Forms.ToolStripMenuItem();
             this.publishToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mtPublishApp = new System.Windows.Forms.ToolStripMenuItem();
             this.mtPublishDatabase = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mtConfiguration = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mtFeature = new System.Windows.Forms.ToolStripMenuItem();
+            this.mtPublish = new System.Windows.Forms.ToolStripMenuItem();
+            this.mtStart = new System.Windows.Forms.ToolStripMenuItem();
+            this.mtDatabase = new System.Windows.Forms.ToolStripMenuItem();
+            this.mtReplaceConfig = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSaveSelected = new System.Windows.Forms.Button();
             this.btnUncheckAll = new System.Windows.Forms.Button();
@@ -52,12 +58,6 @@
             this.clProcess = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clMessage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clOrder = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mtFeature = new System.Windows.Forms.ToolStripMenuItem();
-            this.mtPublish = new System.Windows.Forms.ToolStripMenuItem();
-            this.mtStart = new System.Windows.Forms.ToolStripMenuItem();
-            this.mtDatabase = new System.Windows.Forms.ToolStripMenuItem();
-            this.mtReplaceConfig = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -76,22 +76,6 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // settingsToolStripMenuItem
-            // 
-            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mtConfiguration,
-            this.dataToolStripMenuItem});
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
-            this.settingsToolStripMenuItem.Text = "Settings";
-            // 
-            // mtConfiguration
-            // 
-            this.mtConfiguration.Name = "mtConfiguration";
-            this.mtConfiguration.Size = new System.Drawing.Size(224, 26);
-            this.mtConfiguration.Text = "Configuration";
-            this.mtConfiguration.Click += new System.EventHandler(this.mtConfiguration_Click);
-            // 
             // publishToolStripMenuItem1
             // 
             this.publishToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -104,16 +88,75 @@
             // mtPublishApp
             // 
             this.mtPublishApp.Name = "mtPublishApp";
-            this.mtPublishApp.Size = new System.Drawing.Size(224, 26);
+            this.mtPublishApp.Size = new System.Drawing.Size(155, 26);
             this.mtPublishApp.Text = "App";
             this.mtPublishApp.Click += new System.EventHandler(this.mtPublishApp_Click);
             // 
             // mtPublishDatabase
             // 
             this.mtPublishDatabase.Name = "mtPublishDatabase";
-            this.mtPublishDatabase.Size = new System.Drawing.Size(224, 26);
+            this.mtPublishDatabase.Size = new System.Drawing.Size(155, 26);
             this.mtPublishDatabase.Text = "Database";
             this.mtPublishDatabase.Click += new System.EventHandler(this.mtPublishDatabase_Click);
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mtConfiguration,
+            this.dataToolStripMenuItem});
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            // 
+            // mtConfiguration
+            // 
+            this.mtConfiguration.Name = "mtConfiguration";
+            this.mtConfiguration.Size = new System.Drawing.Size(183, 26);
+            this.mtConfiguration.Text = "Configuration";
+            this.mtConfiguration.Click += new System.EventHandler(this.mtConfiguration_Click);
+            // 
+            // dataToolStripMenuItem
+            // 
+            this.dataToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mtFeature,
+            this.mtPublish,
+            this.mtStart,
+            this.mtDatabase,
+            this.mtReplaceConfig});
+            this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
+            this.dataToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
+            this.dataToolStripMenuItem.Text = "Data";
+            // 
+            // mtFeature
+            // 
+            this.mtFeature.Name = "mtFeature";
+            this.mtFeature.Size = new System.Drawing.Size(193, 26);
+            this.mtFeature.Text = "Feature";
+            // 
+            // mtPublish
+            // 
+            this.mtPublish.Name = "mtPublish";
+            this.mtPublish.Size = new System.Drawing.Size(193, 26);
+            this.mtPublish.Text = "Publish";
+            this.mtPublish.Click += new System.EventHandler(this.mtPublish_Click);
+            // 
+            // mtStart
+            // 
+            this.mtStart.Name = "mtStart";
+            this.mtStart.Size = new System.Drawing.Size(193, 26);
+            this.mtStart.Text = "Start";
+            // 
+            // mtDatabase
+            // 
+            this.mtDatabase.Name = "mtDatabase";
+            this.mtDatabase.Size = new System.Drawing.Size(193, 26);
+            this.mtDatabase.Text = "Database";
+            // 
+            // mtReplaceConfig
+            // 
+            this.mtReplaceConfig.Name = "mtReplaceConfig";
+            this.mtReplaceConfig.Size = new System.Drawing.Size(193, 26);
+            this.mtReplaceConfig.Text = "Replace Config";
             // 
             // panel1
             // 
@@ -211,6 +254,7 @@
             // 
             this.dgvStart.AllowUserToAddRows = false;
             this.dgvStart.AllowUserToDeleteRows = false;
+            this.dgvStart.AllowUserToResizeRows = false;
             this.dgvStart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clSelected,
@@ -221,11 +265,15 @@
             this.clMessage,
             this.clOrder});
             this.dgvStart.Location = new System.Drawing.Point(3, 3);
+            this.dgvStart.MultiSelect = false;
             this.dgvStart.Name = "dgvStart";
+            this.dgvStart.RowHeadersVisible = false;
             this.dgvStart.RowHeadersWidth = 51;
             this.dgvStart.RowTemplate.Height = 29;
+            this.dgvStart.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvStart.Size = new System.Drawing.Size(550, 406);
             this.dgvStart.TabIndex = 0;
+            this.dgvStart.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvStart_CellFormatting);
             // 
             // clSelected
             // 
@@ -289,48 +337,6 @@
             this.clOrder.ReadOnly = true;
             this.clOrder.Visible = false;
             this.clOrder.Width = 125;
-            // 
-            // dataToolStripMenuItem
-            // 
-            this.dataToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mtFeature,
-            this.mtPublish,
-            this.mtStart,
-            this.mtDatabase,
-            this.mtReplaceConfig});
-            this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
-            this.dataToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.dataToolStripMenuItem.Text = "Data";
-            // 
-            // mtFeature
-            // 
-            this.mtFeature.Name = "mtFeature";
-            this.mtFeature.Size = new System.Drawing.Size(224, 26);
-            this.mtFeature.Text = "Feature";
-            // 
-            // mtPublish
-            // 
-            this.mtPublish.Name = "mtPublish";
-            this.mtPublish.Size = new System.Drawing.Size(224, 26);
-            this.mtPublish.Text = "Publish";
-            // 
-            // mtStart
-            // 
-            this.mtStart.Name = "mtStart";
-            this.mtStart.Size = new System.Drawing.Size(224, 26);
-            this.mtStart.Text = "Start";
-            // 
-            // mtDatabase
-            // 
-            this.mtDatabase.Name = "mtDatabase";
-            this.mtDatabase.Size = new System.Drawing.Size(224, 26);
-            this.mtDatabase.Text = "Database";
-            // 
-            // mtReplaceConfig
-            // 
-            this.mtReplaceConfig.Name = "mtReplaceConfig";
-            this.mtReplaceConfig.Size = new System.Drawing.Size(224, 26);
-            this.mtReplaceConfig.Text = "Replace Config";
             // 
             // frmMain
             // 
