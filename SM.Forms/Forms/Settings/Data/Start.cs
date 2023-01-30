@@ -269,10 +269,10 @@ namespace SM.Forms.Forms.Settings.Data
         private void CheckedChangeItem(object sender, EventArgs e)
         {
             CheckBox cb = sender as CheckBox;
-            var item = items.FirstOrDefault(i => i.Name == cb.Text);
+            var item = items.FirstOrDefault(i => i.Name == cb?.Text);
             if (item != null)
             {
-                if (cb.Checked)
+                if (cb != null && cb.Checked)
                 {
                     selectedFeatures.Add(item.Id);
                 }

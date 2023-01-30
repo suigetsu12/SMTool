@@ -1,86 +1,36 @@
 [
   {
     "id": "747aaf71-215c-4ae9-922d-bcdac8c14303",
-    "name": "HouseKeepingName",
-    "value": "housekeeping_queue_mspod12_hieunguyen",
-    "type": 0
+    "type": 0, //0:replace value by key, 1: replace new value by old value
+    "key": "HouseKeepingName",
+    "values": [
+      {
+        "old": "",
+        "new": "housekeeping_queue_mspod12_hieunguyen",
+        "default": 1
+      },
+      {
+        "old": "",
+        "new": "housekeeping_queue_mspod12_hieunguyen123",
+        "default": 0
+      }
+    ]
   },
   {
     "id": "1acba543-d5b5-4a2b-9cf0-7ac54c1852ca",
-    "name": "UnlockEngagementQueueName",
-    "value": "unlockengagement_queue__mspod12_hieunguyen",
-    "type": 0
-  },
-  {
-    "id": "a88e4cd8-f340-42bc-9c9e-fe94e47afff5",
-    "name": "SubscriptionName",
-    "value": "spoprocess_sub_hieunguyen",
-    "type": 0
-  },
-  {
-    "id": "9e14bb39-690d-49d8-8f95-92338e9d6049",
-    "name": "TopicName",
-    "value": "spoprocess_topic_mspod12",
-    "type": 0
-  },
-  {
-    "id": "f837b357-407e-4542-b6d8-1243b379bf04",
-    "name": "WpGenerationQueueName",
-    "value": "wp_generation_queue_mspod12_hieunguyen",
-    "type": 0
-  },
-  {
-    "id": "77d25edf-dfb8-4513-a78e-314beefb929d",
-    "name": "QueueName",
-    "value": "spoprocess_queue_mspod12_hieunguyen",
-    "type": 0
-  },
-  {
-    "id": "3c3d108b-b6b3-401b-b84d-08f04ab7b011",
-    "name": "FileCheckQueueName",
-    "value": "integritycheckprocessor_queue_mspod12_hieunguyen",
-    "type": 0
-  },
-  {
-    "id": "274a9e08-4ae6-459b-be63-49a9264dfc57",
-    "name": "DuplicateEngQueueName",
-    "value": "duplicateengqueue_mspod12_hieunguyen",
-    "type": 0
-  },
-  {
-    "id": "041e15b0-289b-411e-9305-b708313d7f78",
-    "name": "DuplicateFileQueueName",
-    "value": "duplicatefilequeue_mspod12_hieunguyen",
-    "type": 0
-  },
-  {
-    "id": "2f3cd2a2-7f9a-4aec-9250-3290bfd708f0",
-    "name": "ArchiveQueueName",
-    "value": "archiveprocessor_queue_mspod12_hieunguyen",
-    "type": 0
-  },
-  {
-    "id": "cb90bbd1-d4ff-4352-9506-27646716e8d8",
-    "name": "CarryforwardQueueName",
-    "value": "carryforward_queue_mspod12_hieunguyen",
-    "type": 0
-  },
-  {
-    "id": "a1de6eb4-9bf7-4950-a8b6-3bcae25df5d4",
-    "name": "CopyFileTransferQueueName",
-    "value": "carryforward_filetransfer_queue_mspod12_hieunguyen",
-    "type": 0
-  },
-  {
-    "id": "2b0cf0ae-52db-4358-9c48-f329214dd27a",
-    "name": "ContentQueueName",
-    "value": "carryforward_content_queue_mspod12_hieunguyen",
-    "type": 0
-  },
-  {
-    "id": "dd99d12f-6366-4051-81af-a35b53b9f028",
-    "name": "CopyEngQueueName",
-    "value": "carryforward_copy_eng_queue_mspod12_hieunguyen",
-    "type": 0
+    "type": 1, //0:replace value by key, 1: replace new value by old value
+    "key": "",
+    "values": [
+      {
+        "old": "unlockengagement_queue",
+        "new": "unlockengagement_queue__mspod12_hieunguyen",
+        "default": 1
+      },
+      {
+        "old": "unlockengagement_queue",
+        "new": "unlockengagement_queue__mspod12_hieunguyen123",
+        "default": 0
+      }
+    ]
   }
 ]

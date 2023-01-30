@@ -132,6 +132,7 @@
             this.mtFeature.Name = "mtFeature";
             this.mtFeature.Size = new System.Drawing.Size(224, 26);
             this.mtFeature.Text = "Feature";
+            this.mtFeature.Click += new System.EventHandler(this.mtFeature_Click);
             // 
             // mtPublish
             // 

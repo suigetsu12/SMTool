@@ -81,6 +81,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.grbCF = new System.Windows.Forms.GroupBox();
+            this.txtDeployEnvCF = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
             this.txtContainerCodeCF = new System.Windows.Forms.TextBox();
             this.txtServerCF = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -100,6 +102,8 @@
             this.txtGeoCF = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.grbMain = new System.Windows.Forms.GroupBox();
+            this.txtDeployEnvMain = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.txtContainerCodeMain = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.txtContainerPasswordMain = new System.Windows.Forms.TextBox();
@@ -118,10 +122,6 @@
             this.label28 = new System.Windows.Forms.Label();
             this.txtServerMain = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.txtDeployEnvMain = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtDeployEnvCF = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.grbCF.SuspendLayout();
@@ -130,12 +130,13 @@
             // 
             // btnSave
             // 
+            this.btnSave.BackColor = System.Drawing.SystemColors.Control;
             this.btnSave.Location = new System.Drawing.Point(690, 780);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(94, 29);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtPath
@@ -496,6 +497,22 @@
             this.grbCF.TabStop = false;
             this.grbCF.Text = "CF";
             // 
+            // txtDeployEnvCF
+            // 
+            this.txtDeployEnvCF.Location = new System.Drawing.Point(154, 313);
+            this.txtDeployEnvCF.Name = "txtDeployEnvCF";
+            this.txtDeployEnvCF.Size = new System.Drawing.Size(220, 27);
+            this.txtDeployEnvCF.TabIndex = 37;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(64, 316);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(84, 20);
+            this.label30.TabIndex = 36;
+            this.label30.Text = "Deploy Env";
+            // 
             // txtContainerCodeCF
             // 
             this.txtContainerCodeCF.Location = new System.Drawing.Point(154, 280);
@@ -669,6 +686,22 @@
             this.grbMain.TabStop = false;
             this.grbMain.Text = "Main";
             // 
+            // txtDeployEnvMain
+            // 
+            this.txtDeployEnvMain.Location = new System.Drawing.Point(154, 313);
+            this.txtDeployEnvMain.Name = "txtDeployEnvMain";
+            this.txtDeployEnvMain.Size = new System.Drawing.Size(220, 27);
+            this.txtDeployEnvMain.TabIndex = 19;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(64, 316);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(84, 20);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Deploy Env";
+            // 
             // txtContainerCodeMain
             // 
             this.txtContainerCodeMain.Location = new System.Drawing.Point(154, 280);
@@ -812,38 +845,6 @@
             this.label29.Size = new System.Drawing.Size(50, 20);
             this.label29.TabIndex = 0;
             this.label29.Text = "Server";
-            // 
-            // txtDeployEnvMain
-            // 
-            this.txtDeployEnvMain.Location = new System.Drawing.Point(154, 313);
-            this.txtDeployEnvMain.Name = "txtDeployEnvMain";
-            this.txtDeployEnvMain.Size = new System.Drawing.Size(220, 27);
-            this.txtDeployEnvMain.TabIndex = 19;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(64, 316);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 20);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Deploy Env";
-            // 
-            // txtDeployEnvCF
-            // 
-            this.txtDeployEnvCF.Location = new System.Drawing.Point(154, 313);
-            this.txtDeployEnvCF.Name = "txtDeployEnvCF";
-            this.txtDeployEnvCF.Size = new System.Drawing.Size(220, 27);
-            this.txtDeployEnvCF.TabIndex = 37;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(64, 316);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(84, 20);
-            this.label30.TabIndex = 36;
-            this.label30.Text = "Deploy Env";
             // 
             // frmConfiguration
             // 

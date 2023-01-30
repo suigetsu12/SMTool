@@ -13,6 +13,9 @@
     <Compile Update="Forms\Settings\Configuration.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\Settings\Data\Feature.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\Settings\Data\Publish.cs">
       <SubType>Form</SubType>
     </Compile>

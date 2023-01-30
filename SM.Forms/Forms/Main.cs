@@ -210,5 +210,10 @@ namespace SM.Forms.Forms
         {
             ShowForm(new frmDataStart());
         }
+
+        private void mtFeature_Click(object sender, EventArgs e)
+        {
+            ShowForm(new frmFeature());
+        }
     }
 }
