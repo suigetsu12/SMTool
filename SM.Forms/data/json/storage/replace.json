@@ -1,35 +1,35 @@
 [
   {
     "id": "747aaf71-215c-4ae9-922d-bcdac8c14303",
-    "type": 0, //0:replace value by key, 1: replace new value by old value
-    "key": "HouseKeepingName",
+    "type": true,
+    "key_name": "HouseKeepingName",
     "values": [
       {
-        "old": "",
-        "new": "housekeeping_queue_mspod12_hieunguyen",
-        "default": 1
+        "old_value": "",
+        "new_value": "housekeeping_queue_mspod12_hieunguyen",
+        "default": true
       },
       {
-        "old": "",
-        "new": "housekeeping_queue_mspod12_hieunguyen123",
-        "default": 0
+        "old_value": "",
+        "new_value": "housekeeping_queue_mspod12_hieunguyen123",
+        "default": false
       }
     ]
   },
   {
     "id": "1acba543-d5b5-4a2b-9cf0-7ac54c1852ca",
-    "type": 1, //0:replace value by key, 1: replace new value by old value
-    "key": "",
+    "type": false,
+    "key_name": "",
     "values": [
       {
-        "old": "unlockengagement_queue",
-        "new": "unlockengagement_queue__mspod12_hieunguyen",
-        "default": 1
+        "old_value": "dev@hainguyenstepmedia.onmicrosoft.com",
+        "new_value": "dev123@hainguyenstepmedia.onmicrosoft.com",
+        "default": true
       },
       {
-        "old": "unlockengagement_queue",
-        "new": "unlockengagement_queue__mspod12_hieunguyen123",
-        "default": 0
+        "old_value": "unlockengagement_queue",
+        "new_value": "unlockengagement_queue__mspod12_hieunguyen123",
+        "default": false
       }
     ]
   }

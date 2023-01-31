@@ -215,5 +215,10 @@ namespace SM.Forms.Forms
         {
             ShowForm(new frmFeature());
         }
+
+        private void mtReplaceConfig_Click(object sender, EventArgs e)
+        {
+            ShowForm(new frmReplace());
+        }
     }
 }

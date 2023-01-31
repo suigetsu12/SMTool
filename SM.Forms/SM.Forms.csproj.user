@@ -19,6 +19,9 @@
     <Compile Update="Forms\Settings\Data\Publish.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\Settings\Data\Replace.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\Settings\Data\Start.cs">
       <SubType>Form</SubType>
     </Compile>

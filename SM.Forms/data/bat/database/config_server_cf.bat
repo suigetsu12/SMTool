@@ -2,14 +2,13 @@ set deployenv="DEV"
 
 set MSBuild="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\MSBuild.exe"
 
-set SQLServerSolution="C:\Projects\Commercial\6.0\AuvCommercial.SQLDB\DatabaseDeployment\DatabaseDeployment.sln"
+set SQLServerSolution="D:\Projects\SM\Commercial\6.0\AuvCommercial.SQLDB\DatabaseDeployment\DatabaseDeployment.sln"
 
-set Catalog_DACPAC="C:\Projects\Commercial\6.0\AuvCommercial.SQLDB\DatabaseDeployment\Catalog\bin\Local\Catalog.dacpac"
+set Catalog_DACPAC="D:\Projects\SM\Commercial\6.0\AuvCommercial.SQLDB\DatabaseDeployment\Catalog\bin\Local\Catalog.dacpac"
 
-set Core_DACPAC="C:\Projects\Commercial\6.0\AuvCommercial.SQLDB\DatabaseDeployment\Core\bin\Local\Core.dacpac"
+set Core_DACPAC="D:\Projects\SM\Commercial\6.0\AuvCommercial.SQLDB\DatabaseDeployment\Core\bin\Local\Core.dacpac"
 
-set WorkingPaper_DACPAC="C:\Projects\Commercial\6.0\AuvCommercial.SQLDB\DatabaseDeployment\WorkingPaper\bin\Local\WorkingPaper.dacpac"
-:: Reference to url for more information https://docs.microsoft.com/en-us/sql/tools/sqlpackage?view=sql-server-ver15#publish-parameters-properties-and-sqlcmd-variables
+set WorkingPaper_DACPAC="D:\Projects\SM\Commercial\6.0\AuvCommercial.SQLDB\DatabaseDeployment\WorkingPaper\bin\Local\WorkingPaper.dacpac"
 
 set SqlPackage="C:\Program Files\Microsoft SQL Server\150\DAC\bin\SqlPackage.exe"
 
@@ -31,7 +30,7 @@ set ContainerCode=AAAAAA
 
 :: SQL Server information
 
-set SQLServerInstance=localhost,1434
+set SQLServerInstance=ADMIN-07SPBGMBT\MSSQLSERVER02,1434
 
 set SQLServerUsername=sa
 

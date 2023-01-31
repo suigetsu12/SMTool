@@ -159,6 +159,7 @@
             this.mtReplaceConfig.Name = "mtReplaceConfig";
             this.mtReplaceConfig.Size = new System.Drawing.Size(224, 26);
             this.mtReplaceConfig.Text = "Replace Config";
+            this.mtReplaceConfig.Click += new System.EventHandler(this.mtReplaceConfig_Click);
             // 
             // panel1
             // 
